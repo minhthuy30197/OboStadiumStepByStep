@@ -1,13 +1,13 @@
-#Bước 2: Dựng layout trang web
+# Bước 2: Dựng layout trang web
 
 > Website demo được xây dựng từ template [Obo Stadium](https://cody0203.github.io/normal-obo-stadium/), có chỉnh sửa đề phù hợp với nghiệp vụ của một trang thương mại điện tử
 
 <br>
 
-####Source code template (đã chỉnh sửa)
+#### Source code template (đã chỉnh sửa)
 [Xem tại đây](../original-obo-stadium) 
 
-####Sơ đồ các trang thuộc website tĩnh
+#### Sơ đồ các trang thuộc website tĩnh
 ![Cấu trúc trang web tĩnh](../images/ui-diagram.PNG)
 
 **Tình trạng:** Nhận thấy các trang đều có chung một cấu trúc: Header - Body - Footer. Trong đó footer ở tất cả các trang như nhau. Header có 2 loại: header lớn có chứa ảnh ở trang chủ, header thu gọn ở các trang còn lại.<br>
@@ -20,7 +20,7 @@
 Component trong Thymeleaf gọi là **fragment**. Thymeleaf sử dụng các fragment để lắp ghép lại với nhau tạo thành một **layout**.
 
 
-####Thực hành dựng layout
+#### Thực hành dựng layout
 - Copy các file tĩnh được sử dụng trong template vào thư mục **/static**. Nên giữ nguyên cách phân chia thư mục (css, image, script, vendor) để tiện tham chiếu.
 - Tạo thư mục **/templates/fragment** để chứa các fragment. 
 - Tạo các fragment: footer, header, login modal, size choose modal. Mỗi fragment đặt trong một file html có tên gợi nhớ. 
@@ -85,6 +85,6 @@ Component trong Thymeleaf gọi là **fragment**. Thymeleaf sử dụng các fra
 ```
 
 
-####Tham khảo
+#### Tham khảo
 - Hướng dẫn sử dụng fragments: https://openplanning.net/12371/thymeleaf-fragment
 - Hướng dẫn sử dụng layout: https://openplanning.net/12369/thymeleaf-page-layout
