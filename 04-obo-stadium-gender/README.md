@@ -2,7 +2,7 @@
 
 > Ở bước 3, chúng ta đã dựng được template thành website tĩnh. Để biến thành website động, cần bổ sung thêm entity, repository, service và xử lý controller để trả ra data đồng thời sử dụng cú pháp Thymeleaf để render 
 
-## Bài tập 1: Tạo entity và repository theo thiết kế database
+### Bài tập 1: Tạo entity và repository theo thiết kế database
 
 ![Thiết kế database](https://github.com/minhthuy30197/OboStadiumStepByStep/blob/main/images/database.png)
 <br>
