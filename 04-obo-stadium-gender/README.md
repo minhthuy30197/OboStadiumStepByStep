@@ -4,7 +4,7 @@
 
 ### Bài tập 1: Tạo entity và repository theo thiết kế database
 
-![Thiết kế database](https://github.com/minhthuy30197/OboStadiumStepByStep/blob/main/images/database.png)
+![Thiết kế database](../images/database.PNG)
 <br>
 https://docs.google.com/document/d/1-6Ru2IOioTl3lg0s0TrXmLUL3CNCRertbH4wIG_1z78/edit?usp=sharing
 
