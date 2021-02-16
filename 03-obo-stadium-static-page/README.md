@@ -1,10 +1,10 @@
-#Bước 3: Serve website tĩnh
+# Bước 3: Serve website tĩnh
 
 > Sử dụng layout đã tạo ở bước 2, dựng trang Obo Stadium tĩnh (chưa yêu cầu vận dụng cú pháp Thymeleaf để render html với dữ liệu động). Mục đích của bước này nhằm giúp các bạn làm quen với fragment và layout. 
 
 
-##Thực hành dựng trang chủ
-####Tạo template
+## Thực hành dựng trang chủ
+#### Tạo template
 - Tạo file **index.html** trong thư mục **/templates/shop**
 - Tạo khung template: Thay thế bằng fragment "main-fragment" ở template /layout/layout.html. Copy/paste nội dung từ source code tĩnh, điền vào các phần tilte, header, css resources, js resource và main content  
 ```html
@@ -40,7 +40,7 @@
 
 Lưu ý: Nên gom nhóm các template cùng nhóm chức năng vào trong cùng thư mục để dễ quản lý
 <br><br>
-####Tạo controller
+#### Tạo controller
 Tạo class ShopController chứa method xử lý request **GET /**. Method trả ra đường dẫn đến template trang chủ để render.
 ```java
 @Controller
@@ -72,5 +72,5 @@ Lưu ý: Tạo class ShopController trong package /controller/anonymous ---> Nê
 │           UserController.java
 ```
 
-##Bài tập: Dựng trang Tin tức
+## Bài tập: Dựng trang Tin tức
 Request đến trang tin tức: GET /tin-tuc
