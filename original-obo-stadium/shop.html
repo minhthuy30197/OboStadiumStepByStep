@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" type="text/css" href="./vendor/bootstrap/css/bootstrap.min.css"/>
+    <!-- Slick CSS-->
+    <link rel="stylesheet" type="text/css" href="./vendor/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="./vendor/slick/slick-theme.css"/>
+    <!-- Font Awesome CSS-->
+    <link rel="stylesheet" type="text/css" href="./vendor/fontawesome/css/all.css"/>
+    <!-- Pretty Checkbox CSS-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css"/>
+    <!-- Login Modal-->
+    <link rel="stylesheet" type="text/css" href="./css/components/login-modal.css"/>
+    <!-- Useed in Js-->
+    <link rel="stylesheet" type="text/css" href="./css/used-in-js.css"/>
+    <!--Vendor-->
+    <link rel="stylesheet" type="text/css" href="./vendor/pagination/jquery.paginate.css"/>
+    <!-- Components CSS-->
+    <link rel="stylesheet" type="text/css" href="./css/components/header.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/components/products.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/components/shop/filter-bar.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/components/shop/product-showing.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/components/shop/filter-bar-small.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/components/pagination.css"/>
+    <!-- Common CSS-->
+    <link rel="stylesheet" type="text/css" href="./css/main.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/except-home-page.css"/>
+    <title>Sản phẩm</title>
+    <link rel="shortcut icon" href="./image/favicon.ico" type="image/x-icon"/>
+  </head>
+  <body>
+    <header class="container-fluid">
+      <nav class="navbar navbar-expand-lg navbar-light container"><a class="navbar-brand" href="./"><img class="img-fluid" src="./image/logo-white.png" alt="logo"/></a>
+        <div class="search-form">
+          <form>
+            <div class="search-input-wrapper">
+              <input class="form-control search-input" type="text" placeholder="Bạn cần tìm gì..."/>
+              <button class="btn btn-primary text-uppercase red-btn search-button" type="submit"><i class="fas fa-search"></i></button>
+            </div>
+          </form>
+        </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse justify-content-md-end text-center" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" id="shop" href="./shop.html">Sản phẩm</a></li>
+            <li class="nav-item"><a class="nav-link" id="news" href="./news.html">Tin tức</a></li>
+            <li class="nav-item"><a class="nav-link account-setting" id="account" href="" data-toggle="modal" data-target="#signInSignUp"></a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="breadcrumb container"><a class="previous-page" href="./index.html">Trang chủ</a><i class="fas fa-chevron-right arrow"></i><span class="current-page">S&#x1EA3;n ph&#x1EA9;m</span></div>
+      <div class="shop-content-wrapper container">
+        <div class="row">
+          <!-- Filter -->
+          <div class="filter-bar col-lg-3">
+            <div class="filter-header content">
+              <div class="left-side d-flex align-items-center"><i class="fas fa-sliders-h"></i>
+                <div class="text">Lọc</div>
+              </div>
+              <button class="clear-filter btn btn-primary" disabled="disabled">Bỏ lọc</button>
+            </div>
+            <div class="break-line"></div>
+            <!-- Brand -->
+            <div class="brand content">
+              <div class="title" data-toggle="collapse" href="#brand-collapse" role="button" aria-expanded="false" aria-controls="brand-collapse">
+                <div class="text">Thương hiệu</div><i class="fas fa-chevron-up"></i>
+              </div>
+              <div class="select-filter collapse show" id="brand-collapse">
+                <div class="item">
+                  <div class="pretty p-svg p-curve">
+                    <input class="filter-checkbox" type="checkbox" name="nike" id="nike" data-id="Nike"/>
+                    <div class="state p-success">
+                      <svg class="svg svg-icon" viewbox="0 0 20 20">
+                        <path d="M7.629,14.566c0.125,0.125,0.291,0.188,0.456,0.188c0.164,0,0.329-0.062,0.456-0.188l8.219-8.221c0.252-0.252,0.252-0.659,0-0.911c-0.252-0.252-0.659-0.252-0.911,0l-7.764,7.763L4.152,9.267c-0.252-0.251-0.66-0.251-0.911,0c-0.252,0.252-0.252,0.66,0,0.911L7.629,14.566z" style="stroke: white;fill:white;"></path>
+                      </svg>
+                      <label class="checkbox-label" for="nike">Nike</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="pretty p-svg p-curve">
+                    <input class="filter-checkbox" type="checkbox" name="air-jordan" id="air-jordan" data-id="Air Jordan"/>
+                    <div class="state p-success">
+                      <svg class="svg svg-icon" viewbox="0 0 20 20">
+                        <path d="M7.629,14.566c0.125,0.125,0.291,0.188,0.456,0.188c0.164,0,0.329-0.062,0.456-0.188l8.219-8.221c0.252-0.252,0.252-0.659,0-0.911c-0.252-0.252-0.659-0.252-0.911,0l-7.764,7.763L4.152,9.267c-0.252-0.251-0.66-0.251-0.911,0c-0.252,0.252-0.252,0.66,0,0.911L7.629,14.566z" style="stroke: white;fill:white;"></path>
+                      </svg>
+                      <label class="checkbox-label" for="air-jordan">Air Jordan</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="pretty p-svg p-curve">
+                    <input class="filter-checkbox" type="checkbox" name="adidas" id="adidas" data-id="Adidas"/>
+                    <div class="state p-success">
+                      <svg class="svg svg-icon" viewbox="0 0 20 20">
+                        <path d="M7.629,14.566c0.125,0.125,0.291,0.188,0.456,0.188c0.164,0,0.329-0.062,0.456-0.188l8.219-8.221c0.252-0.252,0.252-0.659,0-0.911c-0.252-0.252-0.659-0.252-0.911,0l-7.764,7.763L4.152,9.267c-0.252-0.251-0.66-0.251-0.911,0c-0.252,0.252-0.252,0.66,0,0.911L7.629,14.566z" style="stroke: white;fill:white;"></path>
+                      </svg>
+                      <label class="checkbox-label" for="adidas">Adidas</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="pretty p-svg p-curve">
+                    <input class="filter-checkbox" type="checkbox" name="converse" id="converse" data-id="Converse"/>
+                    <div class="state p-success">
+                      <svg class="svg svg-icon" viewbox="0 0 20 20">
+                        <path d="M7.629,14.566c0.125,0.125,0.291,0.188,0.456,0.188c0.164,0,0.329-0.062,0.456-0.188l8.219-8.221c0.252-0.252,0.252-0.659,0-0.911c-0.252-0.252-0.659-0.252-0.911,0l-7.764,7.763L4.152,9.267c-0.252-0.251-0.66-0.251-0.911,0c-0.252,0.252-0.252,0.66,0,0.911L7.629,14.566z" style="stroke: white;fill:white;"></path>
+                      </svg>
+                      <label class="checkbox-label" for="converse">Converse</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="break-line"></div>
+            <!-- Category -->
+            <div class="category content">
+              <div class="title" data-toggle="collapse" href="#categories-collapse" role="button" aria-expanded="false" aria-controls="categories-collapse">
+                <div class="text">Danh mục</div><i class="fas fa-chevron-up"></i>
+              </div>
+              <div class="select-filter collapse show" id="categories-collapse">
+                <div class="item">
+                  <div class="pretty p-svg p-curve">
+                    <input class="filter-checkbox" type="checkbox" name="male" id="male" data-id="Male"/>
+                    <div class="state p-success">
+                      <svg class="svg svg-icon" viewbox="0 0 20 20">
+                        <path d="M7.629,14.566c0.125,0.125,0.291,0.188,0.456,0.188c0.164,0,0.329-0.062,0.456-0.188l8.219-8.221c0.252-0.252,0.252-0.659,0-0.911c-0.252-0.252-0.659-0.252-0.911,0l-7.764,7.763L4.152,9.267c-0.252-0.251-0.66-0.251-0.911,0c-0.252,0.252-0.252,0.66,0,0.911L7.629,14.566z" style="stroke: white;fill:white;"></path>
+                      </svg>
+                      <label class="checkbox-label" for="male">Nam</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="pretty p-svg p-curve">
+                    <input class="filter-checkbox" type="checkbox" name="female" id="female" data-id="Female"/>
+                    <div class="state p-success">
+                      <svg class="svg svg-icon" viewbox="0 0 20 20">
+                        <path d="M7.629,14.566c0.125,0.125,0.291,0.188,0.456,0.188c0.164,0,0.329-0.062,0.456-0.188l8.219-8.221c0.252-0.252,0.252-0.659,0-0.911c-0.252-0.252-0.659-0.252-0.911,0l-7.764,7.763L4.152,9.267c-0.252-0.251-0.66-0.251-0.911,0c-0.252,0.252-0.252,0.66,0,0.911L7.629,14.566z" style="stroke: white;fill:white;"></path>
+                      </svg>
+                      <label class="checkbox-label" for="female">Nữ</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="pretty p-svg p-curve">
+                    <input class="filter-checkbox" type="checkbox" name="youth" id="youth" data-id="Youth"/>
+                    <div class="state p-success">
+                      <svg class="svg svg-icon" viewbox="0 0 20 20">
+                        <path d="M7.629,14.566c0.125,0.125,0.291,0.188,0.456,0.188c0.164,0,0.329-0.062,0.456-0.188l8.219-8.221c0.252-0.252,0.252-0.659,0-0.911c-0.252-0.252-0.659-0.252-0.911,0l-7.764,7.763L4.152,9.267c-0.252-0.251-0.66-0.251-0.911,0c-0.252,0.252-0.252,0.66,0,0.911L7.629,14.566z" style="stroke: white;fill:white;"></path>
+                      </svg>
+                      <label class="checkbox-label" for="youth">Trẻ em</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="break-line"></div>
+            <!-- Size -->
+            <div class="size content">
+              <div class="title" data-toggle="collapse" href="#size-collapse" role="button" aria-expanded="false" aria-controls="size-collapse">
+                <div class="text">Size</div><i class="fas fa-chevron-up"></i>
+              </div>
+              <div class="select-filter collapse show" id="size-collapse">
+                <div class="item check-size">35</div>
+                <div class="item check-size">36</div>
+                <div class="item check-size">37</div>
+                <div class="item check-size">38</div>
+                <div class="item check-size">39</div>
+                <div class="item check-size">40</div>
+                <div class="item check-size">41</div>
+                <div class="item check-size">42</div>
+              </div>
+            </div>
+            <div class="break-line"></div>
+            <!-- Price -->
+            <div class="price-range content">
+              <div class="title">
+                <div class="text">Khoảng giá</div>
+              </div>
+              <input class="form-control price-input" id="from-price" type="text" placeholder="Từ" onkeypress="return priceInputValidate(event)"/>
+              <input class="form-control price-input" id="to-price" type="text" placeholder="Đến" pattern="[0-9]" onkeypress="return priceInputValidate(event)"/>
+              <button class="btn btn-primary apply-price red-btn">&aacute;p d&#x1EE5;ng</button>
+            </div>
+          </div>
+
+          <!-- List product -->
+          <div class="product-showing col-lg-9 col-12">
+            <div class="sort">
+              <div class="filter-icon" data-toggle="modal" data-target="#filterModal"><i class="fas fa-filter"></i></div>
+            </div>
+
+            <div class="product-row">
+              <a href="./product-details.html" class="product-link" id ="1">
+                <div class="product position-relative">
+                  <div class="card"><img class="card-img-top" src="./image/product/adidas-Yeezy-Boost-350-V2-Lundmark-Product.png" alt="adidas-Yeezy-Boost-350-V2-Lundmark"/>
+                    <div class="card-body">
+                      <h5 class="card-title">Adidas Yeezy Boost 350 V2 Lundmark (Non</h5>
+                      <p class="price">7.200.000 &#x20AB;</p>
+                      <p class="card-text sold">&Dstrok;&atilde; b&aacute;n 1963 &dstrok;&ocirc;i</p>
+                    </div>
+                  </div>
+                  <div class="shadow mx-auto position-absolute"></div>
+                </div>
+              </a>
+              <a href="./product-details.html" class="product-link" id ="2">
+                <div class="product position-relative">
+                  <div class="card"><img class="card-img-top" src="./image/product/adidas/adidas-NMD-Hu-Pharrell-Mother-Product.jpg" alt="adidas-Yeezy-Boost-350-V2-Lundmark"/>
+                    <div class="card-body">
+                      <h5 class="card-title">Jordan 4 Retro Cool Grey (2019)</h5>
+                      <p class="price">4.810.000 &#x20AB;</p>
+                      <p class="card-text sold">&Dstrok;&atilde; b&aacute;n 1312 &dstrok;&ocirc;i</p>
+                    </div>
+                  </div>
+                  <div class="shadow mx-auto position-absolute"></div>
+                </div>
+              </a>
+              <a href="./product-details.html" class="product-link" id ="3">
+                <div class="product position-relative">
+                  <div class="card"><img class="card-img-top" src="./image/product/adidas/Adidas-NMD-R1-Japan-Triple-White-Product.jpg" alt="adidas-Yeezy-Boost-350-V2-Lundmark"/>
+                    <div class="card-body">
+                      <h5 class="card-title">Jordan 1 Retro Low OG SP Travis Scott</h5>
+                      <p class="price">20.790.000 &#x20AB;</p>
+                      <p class="card-text sold">&Dstrok;&atilde; b&aacute;n 2246 &dstrok;&ocirc;i</p>
+                    </div>
+                  </div>
+                  <div class="shadow mx-auto position-absolute"></div>
+                </div>
+              </a>
+              <a href="./product-details.html" class="product-link" id ="4">
+                <div class="product position-relative">
+                  <div class="card"><img class="card-img-top" src="./image/product/asics/Asics-Gel-Lyte-III-Concepts-Boston-Tea-Party.jpg" alt="adidas-Yeezy-Boost-350-V2-Lundmark"/>
+                    <div class="card-body">
+                      <h5 class="card-title">Air Jordan 1 Mid Yellow Toe Black</h5>
+                      <p class="price">3.740.000 &#x20AB;</p>
+                      <p class="card-text sold">&Dstrok;&atilde; b&aacute;n 564 &dstrok;&ocirc;i</p>
+                    </div>
+                  </div>
+                  <div class="shadow mx-auto position-absolute"></div>
+                </div>
+              </a>
+              <a href="./product-details.html" class="product-link" id ="5">
+                <div class="product position-relative">
+                  <div class="card"><img class="card-img-top" src="./image/product/asics/Asics-Gel-Lyte-III-Afew-Koi.jpg" alt="adidas-Yeezy-Boost-350-V2-Lundmark"/>
+                    <div class="card-body">
+                      <h5 class="card-title">Nike SB Dunk Low Parra</h5>
+                      <p class="price">6.620.000 &#x20AB;</p>
+                      <p class="card-text sold">&Dstrok;&atilde; b&aacute;n 1456 &dstrok;&ocirc;i</p>
+                    </div>
+                  </div>
+                  <div class="shadow mx-auto position-absolute"></div>
+                </div>
+              </a>
+              <a href="./product-details.html" class="product-link" id ="6">
+                <div class="product position-relative">
+                  <div class="card"><img class="card-img-top" src="./image/product/asics/Asics-Gel-Lyte-III-Ronnie-Fieg-Super-Green.jpg" alt="adidas-Yeezy-Boost-350-V2-Lundmark"/>
+                    <div class="card-body">
+                      <h5 class="card-title">Adidas Yeezy Boost 350 V2 Lundmark (Non</h5>
+                      <p class="price">7.200.000 &#x20AB;</p>
+                      <p class="card-text sold">&Dstrok;&atilde; b&aacute;n 1963 &dstrok;&ocirc;i</p>
+                    </div>
+                  </div>
+                  <div class="shadow mx-auto position-absolute"></div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="filterModal" tabindex="-1" role="dialog" aria-labelledby="filterModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="filterModalLabel">Lọc sản phẩm</h5>
+              <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body">
+              <div class="filter-bar small-size">
+                <div class="brand content">
+                  <div class="title" data-toggle="collapse" href="#brand-collapse" role="button" aria-expanded="false" aria-controls="brand-collapse">
+                    <div class="text">Thương hiệu</div><i class="fas fa-chevron-up"></i>
+                  </div>
+                  <div class="select-filter collapse show" id="brand-collapse">
+                    <div class="item">
+                      <div class="pretty p-svg p-curve">
+                        <input class="filter-checkbox" type="checkbox" name="nike" id="nike" data-id="Nike"/>
+                        <div class="state p-success">
+                          <svg class="svg svg-icon" viewbox="0 0 20 20">
+                            <path d="M7.629,14.566c0.125,0.125,0.291,0.188,0.456,0.188c0.164,0,0.329-0.062,0.456-0.188l8.219-8.221c0.252-0.252,0.252-0.659,0-0.911c-0.252-0.252-0.659-0.252-0.911,0l-7.764,7.763L4.152,9.267c-0.252-0.251-0.66-0.251-0.911,0c-0.252,0.252-0.252,0.66,0,0.911L7.629,14.566z" style="stroke: white;fill:white;"></path>
+                          </svg>
+                          <label class="checkbox-label" for="nike">Nike</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="pretty p-svg p-curve">
+                        <input class="filter-checkbox" type="checkbox" name="air-jordan" id="air-jordan" data-id="Air Jordan"/>
+                        <div class="state p-success">
+                          <svg class="svg svg-icon" viewbox="0 0 20 20">
+                            <path d="M7.629,14.566c0.125,0.125,0.291,0.188,0.456,0.188c0.164,0,0.329-0.062,0.456-0.188l8.219-8.221c0.252-0.252,0.252-0.659,0-0.911c-0.252-0.252-0.659-0.252-0.911,0l-7.764,7.763L4.152,9.267c-0.252-0.251-0.66-0.251-0.911,0c-0.252,0.252-0.252,0.66,0,0.911L7.629,14.566z" style="stroke: white;fill:white;"></path>
+                          </svg>
+                          <label class="checkbox-label" for="air-jordan">Air Jordan</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="pretty p-svg p-curve">
+                        <input class="filter-checkbox" type="checkbox" name="adidas" id="adidas" data-id="Adidas"/>
+                        <div class="state p-success">
+                          <svg class="svg svg-icon" viewbox="0 0 20 20">
+                            <path d="M7.629,14.566c0.125,0.125,0.291,0.188,0.456,0.188c0.164,0,0.329-0.062,0.456-0.188l8.219-8.221c0.252-0.252,0.252-0.659,0-0.911c-0.252-0.252-0.659-0.252-0.911,0l-7.764,7.763L4.152,9.267c-0.252-0.251-0.66-0.251-0.911,0c-0.252,0.252-0.252,0.66,0,0.911L7.629,14.566z" style="stroke: white;fill:white;"></path>
+                          </svg>
+                          <label class="checkbox-label" for="adidas">Adidas</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="pretty p-svg p-curve">
+                        <input class="filter-checkbox" type="checkbox" name="converse" id="converse" data-id="Converse"/>
+                        <div class="state p-success">
+                          <svg class="svg svg-icon" viewbox="0 0 20 20">
+                            <path d="M7.629,14.566c0.125,0.125,0.291,0.188,0.456,0.188c0.164,0,0.329-0.062,0.456-0.188l8.219-8.221c0.252-0.252,0.252-0.659,0-0.911c-0.252-0.252-0.659-0.252-0.911,0l-7.764,7.763L4.152,9.267c-0.252-0.251-0.66-0.251-0.911,0c-0.252,0.252-0.252,0.66,0,0.911L7.629,14.566z" style="stroke: white;fill:white;"></path>
+                          </svg>
+                          <label class="checkbox-label" for="converse">Converse</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div id="see-more-dropdown">
+                      <div class="item">
+                        <div class="pretty p-svg p-curve">
+                          <input class="filter-checkbox" type="checkbox" name="asics" id="asics" data-id="Asics"/>
+                          <div class="state p-success">
+                            <svg class="svg svg-icon" viewbox="0 0 20 20">
+                              <path d="M7.629,14.566c0.125,0.125,0.291,0.188,0.456,0.188c0.164,0,0.329-0.062,0.456-0.188l8.219-8.221c0.252-0.252,0.252-0.659,0-0.911c-0.252-0.252-0.659-0.252-0.911,0l-7.764,7.763L4.152,9.267c-0.252-0.251-0.66-0.251-0.911,0c-0.252,0.252-0.252,0.66,0,0.911L7.629,14.566z" style="stroke: white;fill:white;"></path>
+                            </svg>
+                            <label class="checkbox-label" for="asics">Asics</label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="item">
+                        <div class="pretty p-svg p-curve">
+                          <input class="filter-checkbox" type="checkbox" name="vans" id="vans" data-id="Vans"/>
+                          <div class="state p-success">
+                            <svg class="svg svg-icon" viewbox="0 0 20 20">
+                              <path d="M7.629,14.566c0.125,0.125,0.291,0.188,0.456,0.188c0.164,0,0.329-0.062,0.456-0.188l8.219-8.221c0.252-0.252,0.252-0.659,0-0.911c-0.252-0.252-0.659-0.252-0.911,0l-7.764,7.763L4.152,9.267c-0.252-0.251-0.66-0.251-0.911,0c-0.252,0.252-0.252,0.66,0,0.911L7.629,14.566z" style="stroke: white;fill:white;"></path>
+                            </svg>
+                            <label class="checkbox-label" for="vans">Vans</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="see-more" id="see-more-brand">Xem th&ecirc;m</div>
+                  </div>
+                </div>
+                <div class="break-line"></div>
+                <div class="category content">
+                  <div class="title" data-toggle="collapse" href="#categories-collapse" role="button" aria-expanded="false" aria-controls="categories-collapse">
+                    <div class="text">Danh m&#x1EE5;c</div><i class="fas fa-chevron-up"></i>
+                  </div>
+                  <div class="select-filter collapse show" id="categories-collapse">
+                    <div class="item">
+                      <div class="pretty p-svg p-curve">
+                        <input class="filter-checkbox" type="checkbox" name="male" id="male" data-id="Male"/>
+                        <div class="state p-success">
+                          <svg class="svg svg-icon" viewbox="0 0 20 20">
+                            <path d="M7.629,14.566c0.125,0.125,0.291,0.188,0.456,0.188c0.164,0,0.329-0.062,0.456-0.188l8.219-8.221c0.252-0.252,0.252-0.659,0-0.911c-0.252-0.252-0.659-0.252-0.911,0l-7.764,7.763L4.152,9.267c-0.252-0.251-0.66-0.251-0.911,0c-0.252,0.252-0.252,0.66,0,0.911L7.629,14.566z" style="stroke: white;fill:white;"></path>
+                          </svg>
+                          <label class="checkbox-label" for="male">Nam</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="pretty p-svg p-curve">
+                        <input class="filter-checkbox" type="checkbox" name="female" id="female" data-id="Female"/>
+                        <div class="state p-success">
+                          <svg class="svg svg-icon" viewbox="0 0 20 20">
+                            <path d="M7.629,14.566c0.125,0.125,0.291,0.188,0.456,0.188c0.164,0,0.329-0.062,0.456-0.188l8.219-8.221c0.252-0.252,0.252-0.659,0-0.911c-0.252-0.252-0.659-0.252-0.911,0l-7.764,7.763L4.152,9.267c-0.252-0.251-0.66-0.251-0.911,0c-0.252,0.252-0.252,0.66,0,0.911L7.629,14.566z" style="stroke: white;fill:white;"></path>
+                          </svg>
+                          <label class="checkbox-label" for="female">N&#x1EEF;</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="pretty p-svg p-curve">
+                        <input class="filter-checkbox" type="checkbox" name="youth" id="youth" data-id="Youth"/>
+                        <div class="state p-success">
+                          <svg class="svg svg-icon" viewbox="0 0 20 20">
+                            <path d="M7.629,14.566c0.125,0.125,0.291,0.188,0.456,0.188c0.164,0,0.329-0.062,0.456-0.188l8.219-8.221c0.252-0.252,0.252-0.659,0-0.911c-0.252-0.252-0.659-0.252-0.911,0l-7.764,7.763L4.152,9.267c-0.252-0.251-0.66-0.251-0.911,0c-0.252,0.252-0.252,0.66,0,0.911L7.629,14.566z" style="stroke: white;fill:white;"></path>
+                          </svg>
+                          <label class="checkbox-label" for="youth">Thi&#x1EBF;u ni&ecirc;n</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="pretty p-svg p-curve">
+                        <input class="filter-checkbox" type="checkbox" name="toddler" id="toddler" data-id="Toddler"/>
+                        <div class="state p-success">
+                          <svg class="svg svg-icon" viewbox="0 0 20 20">
+                            <path d="M7.629,14.566c0.125,0.125,0.291,0.188,0.456,0.188c0.164,0,0.329-0.062,0.456-0.188l8.219-8.221c0.252-0.252,0.252-0.659,0-0.911c-0.252-0.252-0.659-0.252-0.911,0l-7.764,7.763L4.152,9.267c-0.252-0.251-0.66-0.251-0.911,0c-0.252,0.252-0.252,0.66,0,0.911L7.629,14.566z" style="stroke: white;fill:white;"></path>
+                          </svg>
+                          <label class="checkbox-label" for="toddler">S&#x1A1; sinh</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="break-line"></div>
+                <div class="size content">
+                  <div class="title" data-toggle="collapse" href="#size-collapse" role="button" aria-expanded="false" aria-controls="size-collapse">
+                    <div class="text">Size</div><i class="fas fa-chevron-up"></i>
+                  </div>
+                  <div class="select-filter collapse show" id="size-collapse"></div>
+                </div>
+                <div class="break-line"></div>
+                <div class="price-range content">
+                  <div class="title">
+                    <div class="text">Kho&#x1EA3;ng gi&aacute;</div>
+                  </div>
+                  <input class="form-control price-input" id="from-price-small" type="text" placeholder="Từ" onkeypress="return priceInputValidate(event)"/>
+                  <input class="form-control price-input" id="to-price-small" type="text" placeholder="Đến" pattern="[0-9]" onkeypress="return priceInputValidate(event)"/>
+                </div>
+                <div class="break-line"></div>
+                <div class="release-date content">
+                  <div class="title" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    <div class="text">N&abreve;m ra m&#x1EAF;t</div><i class="fas fa-chevron-up"></i>
+                  </div>
+                  <div class="select-filter collapse show" id="collapseExample">
+                    <div class="date-row">
+                      <div class="item">
+                        <div class="pretty p-svg p-curve">
+                          <input class="filter-checkbox" type="checkbox" name="under-2010" id="under-2010" data-id="2010"/>
+                          <div class="state p-success">
+                            <svg class="svg svg-icon" viewbox="0 0 20 20">
+                              <path d="M7.629,14.566c0.125,0.125,0.291,0.188,0.456,0.188c0.164,0,0.329-0.062,0.456-0.188l8.219-8.221c0.252-0.252,0.252-0.659,0-0.911c-0.252-0.252-0.659-0.252-0.911,0l-7.764,7.763L4.152,9.267c-0.252-0.251-0.66-0.251-0.911,0c-0.252,0.252-0.252,0.66,0,0.911L7.629,14.566z" style="stroke: white;fill:white;"></path>
+                            </svg>
+                            <label class="checkbox-label" for="under-2010">< 2010</label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="item">
+                        <div class="pretty p-svg p-curve">
+                          <input class="filter-checkbox" type="checkbox" name="2011" id="2011" data-id="2011"/>
+                          <div class="state p-success">
+                            <svg class="svg svg-icon" viewbox="0 0 20 20">
+                              <path d="M7.629,14.566c0.125,0.125,0.291,0.188,0.456,0.188c0.164,0,0.329-0.062,0.456-0.188l8.219-8.221c0.252-0.252,0.252-0.659,0-0.911c-0.252-0.252-0.659-0.252-0.911,0l-7.764,7.763L4.152,9.267c-0.252-0.251-0.66-0.251-0.911,0c-0.252,0.252-0.252,0.66,0,0.911L7.629,14.566z" style="stroke: white;fill:white;"></path>
+                            </svg>
+                            <label class="checkbox-label" for="2011">2011</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="date-row">
+                      <div class="item">
+                        <div class="pretty p-svg p-curve">
+                          <input class="filter-checkbox" type="checkbox" name="2012" id="2012" data-id="2012"/>
+                          <div class="state p-success">
+                            <svg class="svg svg-icon" viewbox="0 0 20 20">
+                              <path d="M7.629,14.566c0.125,0.125,0.291,0.188,0.456,0.188c0.164,0,0.329-0.062,0.456-0.188l8.219-8.221c0.252-0.252,0.252-0.659,0-0.911c-0.252-0.252-0.659-0.252-0.911,0l-7.764,7.763L4.152,9.267c-0.252-0.251-0.66-0.251-0.911,0c-0.252,0.252-0.252,0.66,0,0.911L7.629,14.566z" style="stroke: white;fill:white;"></path>
+                            </svg>
+                            <label class="checkbox-label" for="2012">2012</label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="item">
+                        <div class="pretty p-svg p-curve">
+                          <input class="filter-checkbox" type="checkbox" name="2013" id="2013" data-id="2013"/>
+                          <div class="state p-success">
+                            <svg class="svg svg-icon" viewbox="0 0 20 20">
+                              <path d="M7.629,14.566c0.125,0.125,0.291,0.188,0.456,0.188c0.164,0,0.329-0.062,0.456-0.188l8.219-8.221c0.252-0.252,0.252-0.659,0-0.911c-0.252-0.252-0.659-0.252-0.911,0l-7.764,7.763L4.152,9.267c-0.252-0.251-0.66-0.251-0.911,0c-0.252,0.252-0.252,0.66,0,0.911L7.629,14.566z" style="stroke: white;fill:white;"></path>
+                            </svg>
+                            <label class="checkbox-label" for="2013">2013</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="date-row">
+                      <div class="item">
+                        <div class="pretty p-svg p-curve">
+                          <input class="filter-checkbox" type="checkbox" name="2014" id="2014" data-id="2014"/>
+                          <div class="state p-success">
+                            <svg class="svg svg-icon" viewbox="0 0 20 20">
+                              <path d="M7.629,14.566c0.125,0.125,0.291,0.188,0.456,0.188c0.164,0,0.329-0.062,0.456-0.188l8.219-8.221c0.252-0.252,0.252-0.659,0-0.911c-0.252-0.252-0.659-0.252-0.911,0l-7.764,7.763L4.152,9.267c-0.252-0.251-0.66-0.251-0.911,0c-0.252,0.252-0.252,0.66,0,0.911L7.629,14.566z" style="stroke: white;fill:white;"></path>
+                            </svg>
+                            <label class="checkbox-label" for="2014">2014</label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="item">
+                        <div class="pretty p-svg p-curve">
+                          <input class="filter-checkbox" type="checkbox" name="2015" id="2015" data-id="2015"/>
+                          <div class="state p-success">
+                            <svg class="svg svg-icon" viewbox="0 0 20 20">
+                              <path d="M7.629,14.566c0.125,0.125,0.291,0.188,0.456,0.188c0.164,0,0.329-0.062,0.456-0.188l8.219-8.221c0.252-0.252,0.252-0.659,0-0.911c-0.252-0.252-0.659-0.252-0.911,0l-7.764,7.763L4.152,9.267c-0.252-0.251-0.66-0.251-0.911,0c-0.252,0.252-0.252,0.66,0,0.911L7.629,14.566z" style="stroke: white;fill:white;"></path>
+                            </svg>
+                            <label class="checkbox-label" for="2015">2015</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="date-row">
+                      <div class="item">
+                        <div class="pretty p-svg p-curve">
+                          <input class="filter-checkbox" type="checkbox" name="2016" id="2016" data-id="2016"/>
+                          <div class="state p-success">
+                            <svg class="svg svg-icon" viewbox="0 0 20 20">
+                              <path d="M7.629,14.566c0.125,0.125,0.291,0.188,0.456,0.188c0.164,0,0.329-0.062,0.456-0.188l8.219-8.221c0.252-0.252,0.252-0.659,0-0.911c-0.252-0.252-0.659-0.252-0.911,0l-7.764,7.763L4.152,9.267c-0.252-0.251-0.66-0.251-0.911,0c-0.252,0.252-0.252,0.66,0,0.911L7.629,14.566z" style="stroke: white;fill:white;"></path>
+                            </svg>
+                            <label class="checkbox-label" for="2016">2016</label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="item">
+                        <div class="pretty p-svg p-curve">
+                          <input class="filter-checkbox" type="checkbox" name="2017" id="2017" data-id="2017"/>
+                          <div class="state p-success">
+                            <svg class="svg svg-icon" viewbox="0 0 20 20">
+                              <path d="M7.629,14.566c0.125,0.125,0.291,0.188,0.456,0.188c0.164,0,0.329-0.062,0.456-0.188l8.219-8.221c0.252-0.252,0.252-0.659,0-0.911c-0.252-0.252-0.659-0.252-0.911,0l-7.764,7.763L4.152,9.267c-0.252-0.251-0.66-0.251-0.911,0c-0.252,0.252-0.252,0.66,0,0.911L7.629,14.566z" style="stroke: white;fill:white;"></path>
+                            </svg>
+                            <label class="checkbox-label" for="2017">2017</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="date-row">
+                      <div class="item">
+                        <div class="pretty p-svg p-curve">
+                          <input class="filter-checkbox" type="checkbox" name="2018" id="2018" data-id="2018"/>
+                          <div class="state p-success">
+                            <svg class="svg svg-icon" viewbox="0 0 20 20">
+                              <path d="M7.629,14.566c0.125,0.125,0.291,0.188,0.456,0.188c0.164,0,0.329-0.062,0.456-0.188l8.219-8.221c0.252-0.252,0.252-0.659,0-0.911c-0.252-0.252-0.659-0.252-0.911,0l-7.764,7.763L4.152,9.267c-0.252-0.251-0.66-0.251-0.911,0c-0.252,0.252-0.252,0.66,0,0.911L7.629,14.566z" style="stroke: white;fill:white;"></path>
+                            </svg>
+                            <label class="checkbox-label" for="2018">2018</label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="item">
+                        <div class="pretty p-svg p-curve">
+                          <input class="filter-checkbox" type="checkbox" name="2019" id="2019" data-id="2019"/>
+                          <div class="state p-success">
+                            <svg class="svg svg-icon" viewbox="0 0 20 20">
+                              <path d="M7.629,14.566c0.125,0.125,0.291,0.188,0.456,0.188c0.164,0,0.329-0.062,0.456-0.188l8.219-8.221c0.252-0.252,0.252-0.659,0-0.911c-0.252-0.252-0.659-0.252-0.911,0l-7.764,7.763L4.152,9.267c-0.252-0.251-0.66-0.251-0.911,0c-0.252,0.252-0.252,0.66,0,0.911L7.629,14.566z" style="stroke: white;fill:white;"></path>
+                            </svg>
+                            <label class="checkbox-label" for="2019">2019</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button class="clear-filter btn btn-primary" disabled="disabled">Bỏ lọc</button>
+              <button class="btn btn-primary apply-price small red-btn">Áp dụng</button>
+            </div>
+          </div>
+        </div>
+      </div>    &grave;
+      <!-- Modals-->
+      <div class="modal fade" id="signInSignUp" tabindex="-1" role="dialog" aria-labelledby="signInSignUpLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <ul class="nav nav-pills" id="pills-tab" role="tablist">
+                <li class="nav-item"><a class="nav-link active" id="signIn-tab" data-toggle="pill" href="#signIn" role="tab" aria-controls="signIn" aria-selected="true">Đăng nhập</a></li>
+                <li class="nav-item"><a class="nav-link" id="signUp-tab" data-toggle="pill" href="#signUp" role="tab" aria-controls="signUp" aria-selected="false">Đăng ký</a></li>
+              </ul>
+            </div>
+            <div class="modal-body">
+              <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="signIn" role="tabpanel" aria-labelledby="signIn-tab">
+                  <form>
+                    <input class="form-control sign-in-email" placeholder="Email" autocomplete="autocomplete"/>
+                    <div class="invalid-feedback"> </div>
+                    <input class="form-control sign-in-password" type="password" placeholder="Mật khẩu" autocomplete="autocomplete"/>
+                    <div class="invalid-feedback"> </div>
+                    <div class="forgot-password-wrapper"></div>Quên mật khẩu? Nhấn vào <span class="text-btn">đây</span>
+                    <div class="btn btn-primary red-btn sign-in-btn">Đăng nhập</div>
+                  </form>
+                </div>
+                <div class="tab-pane fade" id="signUp" role="tabpanel" aria-labelledby="signUp-tab">
+                  <form>
+                    <input class="form-control sign-up-full-name" placeholder="Họ và tên *" autocomplete="autocomplete"/>
+                    <div class="invalid-feedback"> </div>
+                    <input class="form-control sign-up-phone" placeholder="Số điện thoại *" autocomplete="autocomplete"/>
+                    <div class="invalid-feedback"> </div>
+                    <input class="form-control sign-up-email" placeholder="Email *" autocomplete="autocomplete"/>
+                    <div class="invalid-feedback"> </div>
+                    <input class="form-control sign-up-password" type="password" placeholder="Mật khẩu *" autocomplete="autocomplete"/>
+                    <div class="invalid-feedback"> </div>
+                    <input class="form-control sign-up-confirm-password" type="password" placeholder="Xác nhận mật khẩu *" autocomplete="autocomplete"/>
+                    <div class="invalid-feedback"> </div>
+                    <div class="privacy-confirm"></div>Khi bạn nhấn Đăng ký, bạn đã đồng ý thực hiện mọi giao dịch mua bán theo <span class="text-btn">điều kiện sử dụng và chính sách của OBO Stadium.</span>
+                    <div class="btn btn-primary red-btn sign-up-btn">Đăng kí</div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div><a class="back-to-top" href="#"><img src="./image/back-to-top.png" alt=""/></a>
+    </main>
+
+    <footer class="container-fluid">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="logo col-md-3 col-12 text-md-left text-center"><img class="img-fluid" src="./image/logo-white.png" alt="logo"/></div>
+          <div class="footer-link col-md-9 col-12">
+            <div class="footer-menu d-flex justify-content-md-end align-items-center flex-md-row flex-column"><a class="item" href="./faqs.html">Các câu hỏi thường gặp</a><a class="item" href="./rules.html">Điều khoản</a><a class="item" href="./policy.html">Chính sách</a></div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div class="top-header container-fluid">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 content"><a href="tel:+84365304675" target="_blank">Hotline: 0365304675</a>
+            <div class="social-icon"><a href="https://www.facebook.com/"><i class="fab fa-facebook-square"></i></a><a href="https://www.instagram.com/obostadium/"><i class="fab fa-instagram"></i></a><a href="https://www.pinterest.com/"><i class="fab fa-pinterest-square"></i></a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="./vendor/jquery/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="./vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Main Js-->
+    <script type="text/javascript" src="./script/main.js"></script>
+    <!-- Pagination Js-->
+    <script type="text/javascript" src="./vendor/pagination/jquery.paginate.js"></script>
+    <!-- Currency-->
+    <script type="text/javascript" src="./vendor/currency/currency.min.js"></script>
+    <script src="./script/except-home-page.js"></script>
+    <script src="./script/shop.js"></script>
+  </body>
+</html>

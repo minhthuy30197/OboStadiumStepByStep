@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" type="text/css" href="./vendor/bootstrap/css/bootstrap.min.css"/>
+    <!-- Slick CSS-->
+    <link rel="stylesheet" type="text/css" href="./vendor/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="./vendor/slick/slick-theme.css"/>
+    <!-- Font Awesome CSS-->
+    <link rel="stylesheet" type="text/css" href="./vendor/fontawesome/css/all.css"/>
+    <!-- Pretty Checkbox CSS-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css"/>
+    <!-- Login Modal-->
+    <link rel="stylesheet" type="text/css" href="./css/components/login-modal.css"/>
+    <!-- Useed in Js-->
+    <link rel="stylesheet" type="text/css" href="./css/used-in-js.css"/>
+    <!-- Components CSS-->
+    <link rel="stylesheet" type="text/css" href="./css/components/header.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/components/buying/product-info.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/components/buying/pricing.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/components/buying/shipping-info.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/components/product-details/size-choose.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/components/buying/buying-section.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/components/product-details/size-guide-table.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/components/input-radio.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/components/payment-methods-modal.css"/>
+    <!-- Common CSS-->
+    <link rel="stylesheet" type="text/css" href="./css/main.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/except-home-page.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/buying.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/used-in-js.css"/>
+    <title>Mua sản phẩm</title>
+    <link rel="shortcut icon" href="./image/favicon.ico" type="image/x-icon"/>
+  </head>
+  <body>
+    <header class="container-fluid">
+      <nav class="navbar navbar-expand-lg navbar-light container"><a class="navbar-brand" href="./"><img class="img-fluid" src="./image/logo-white.png" alt="logo"/></a>
+        <div class="search-form">
+          <form>
+            <div class="search-input-wrapper">
+              <input class="form-control search-input" type="text" placeholder="Bạn cần tìm gì..."/>
+              <button class="btn btn-primary text-uppercase red-btn search-button" type="submit"><i class="fas fa-search"></i></button>
+            </div>
+          </form>
+        </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse justify-content-md-end text-center" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" id="shop" href="./shop.html">Sản phẩm</a></li>
+            <li class="nav-item"><a class="nav-link" id="news" href="./news.html">Tin tức</a></li>
+            <li class="nav-item"><a class="nav-link account-setting" id="account" href="" data-toggle="modal" data-target="#signInSignUp"></a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="main-wrapper container">
+        <div class="row">
+          <!-- Product Info Section-->
+          <section class="product-info-wrapper col-lg-7">
+            <div class="product-info">
+              <div class="product-name">Adidas Yeezy Boost 700 Wave Runner Solid Grey</div>
+              <a class="product-image" href="./product-details.html"><img class="img-fluid" src="./image/product-details-image/1.jpg" alt="image-1"/></a>
+            </div>
+          </section>
+          <!-- Buying Function Section-->
+          <section class="buying col-lg-5">
+            <!-- Address Section-->
+            <div class="address-info-wrapper childs">
+              <div class="coupon price-include">
+                <div class="text required-label">Người nhận hàng</div>
+                <div>
+                  <input class="form-control" placeholder="Nhập tên người nhận" type="text" th:value="${user_fullname}" id="in-user-fullname"/>
+                  <div class="invalid-feedback"></div>
+                </div>
+              </div>
+              <div class="coupon price-include">
+                <div class="text required-label">Điện thoại</div>
+                <div>
+                  <input class="form-control" placeholder="Nhập số điện thoại" type="text" th:value="${user_phone}" id="in-user-phone"/>
+                  <div class="invalid-feedback"></div>
+                </div>
+              </div>
+              <div class="coupon price-include">
+                <div class="text required-label">Địa chỉ</div>
+                <div>
+                  <textarea class="form-control" placeholder="Nhập địa chỉ" rows="2" th:text="${user_address}" id="in-user-address"></textarea>
+                  <div class="invalid-feedback"></div>
+                </div>
+              </div>
+            </div>
+            <!-- Promotion Section-->
+            <div class="input-group" style="margin-top:30px">
+              <input type="text" class="form-control" placeholder="Nhập mã khuyến mãi" id="in-coupon" th:value="${product.couponCode}">
+              <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="button" id="btn-apply-coupon">Áp dụng khuyến mãi</button>
+              </div>
+            </div>
+            <!-- Pricing Section-->
+            <div class="pricing childs">
+              <div class="size-btn" data-toggle="modal" data-target="#sizeChooseModal">
+                <button class="btn btn-primary size trans-btn"><span class="size-text">Size</span><span class="size-details">9US | 42.5VN | 26.2CM</span><i class="fas fa-chevron-down dropdown-arrow"></i></button>
+              </div>
+              <div id="buyPlace">
+                <div class="coupon price-include">
+                  <div class="text">Giá sản phẩm</div>
+                  <input class="form-control text-price-input" id="in-price" value="400.000" type="text" readonly/>
+                </div>
+                <div class="coupon price-include">
+                  <div class="text">Khuyến mãi</div>
+                  <input class="form-control text-price-input" id="in-promotion-value" value="0" type="text" readonly/>
+                </div>
+                <div class="coupon price-include">
+                  <div class="text">Tổng thanh toán</div>
+                  <input class="form-control text-price-input" id="in-total-price" value="400.000" type="text" readonly/>
+                </div>
+              </div>
+            </div>
+            <a href="./product-details.html">
+              <button class="btn btn-secondary confirm-btn">Quay lại</button>
+            </a>
+            <button class="btn btn-primary confirm-btn red-btn">Mua ngay</button></a>
+          </section>
+        </div>
+      </div>
+
+      <!-- Modals-->
+      <div class="modal fade" id="sizeChooseModal" tabindex="-1" role="dialog" aria-labelledby="sizeChooseModalTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="sizeChooseModalTitle">Chọn size</h5><a class="size-guide text-btn" data-toggle="modal" href="#sizeGuideModal" data-dismiss="modal">Bảng size</a>
+            </div>
+            <div class="modal-body">
+              <div class="size content">
+                <div class="select-filter">
+                  <div class="item cross" data-size="2.5US | 35VN | 21.3CM" data-id="35">
+                    35
+                  </div>
+                  <div class="item cross" data-size="3.5US | 36VN | 22.2CM" data-id="36">
+                    36
+                  </div>
+                  <div class="item cross" data-size="4.5US | 37VN | 23CM" data-id="37">
+                    37
+                  </div>
+                  <div class="item cross" data-size="5.5US | 38VN | 23.8CM" data-id="38">
+                    38
+                  </div>
+                  <div class="item size-choose" data-size="6.5US | 39VN | 24.6CM" data-id="39">
+                    39
+                  </div>
+                  <div class="item" data-size="7.5US | 40VN | 25.4CM" data-id="40">
+                    40
+                  </div>
+                  <div class="item cross" data-size="8.5US | 41VN | 26.2CM" data-id="41">
+                    41
+                  </div>
+                  <div class="item cross" data-size="9.5US | 42VN | 27.1CM" data-id="42">
+                    42
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="sizeGuideModal" tabindex="-1" role="dialog" aria-labelledby="sizeGuideModalTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable" role="document">
+          <div class="modal-content">
+            <div class="modal-header"><a class="go-back-size-choose text-btn" data-toggle="modal" href="#sizeChooseModal" data-dismiss="modal"><i class="fas fa-chevron-left"></i> Trở lại</a>
+              <h5 class="modal-title" id="sizeGuideModalTitle">Bảng size</h5>
+            </div>
+            <div class="modal-body">
+              <table class="side-guide-table table">
+                <thead>
+                  <tr>
+                    <th>CM</th>
+                    <th>VN/EU</th>
+                    <th>US</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>23.7</td>
+                    <td>38.5</td>
+                    <td>6</td>
+                  </tr>
+                  <tr>
+                    <td>23.7</td>
+                    <td>38.5</td>
+                    <td>6</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="addNewShipping" tabindex="-1" role="dialog" aria-labelledby="addNewShippingLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="addNewShippingLabel">Thêm địa chỉ mới</h5>
+              <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            </div>
+            <form class="modal-body">
+              <input class="form-control full-name" placeholder="Họ và tên" data-name="Họ và tên"/>
+              <div class="invalid-feedback"> </div>
+              <input class="form-control phone" placeholder="Số điện thoại" data-name="Số điện thoại"/>
+              <div class="invalid-feedback"> </div>
+              <select class="custom-select city" data-name="Thành phố"></select>
+              <div class="invalid-feedback"> </div>
+              <select class="custom-select district" data-name="Quận/Huyện">
+                <option>Quận/Huyện</option>
+              </select>
+              <div class="invalid-feedback"> </div>
+              <select class="custom-select ward" data-name="Phường/Xã">
+                <option>Phường/Xã</option>
+              </select>
+              <div class="invalid-feedback"> </div>
+              <textarea class="form-control address" placeholder="Địa chỉ" data-name="Địa chỉ"></textarea>
+              <div class="invalid-feedback"> </div>
+            </form>
+            <div class="modal-footer">
+              <button class="btn" type="button" data-dismiss="modal">Huỷ bỏ</button>
+              <button class="btn btn-primary red-btn save" type="button">Lưu</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Modals-->
+      <div class="modal fade" id="signInSignUp" tabindex="-1" role="dialog" aria-labelledby="signInSignUpLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <ul class="nav nav-pills" id="pills-tab" role="tablist">
+                <li class="nav-item"><a class="nav-link active" id="signIn-tab" data-toggle="pill" href="#signIn" role="tab" aria-controls="signIn" aria-selected="true">Đăng nhập</a></li>
+                <li class="nav-item"><a class="nav-link" id="signUp-tab" data-toggle="pill" href="#signUp" role="tab" aria-controls="signUp" aria-selected="false">Đăng ký</a></li>
+              </ul>
+            </div>
+            <div class="modal-body">
+              <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="signIn" role="tabpanel" aria-labelledby="signIn-tab">
+                  <form>
+                    <input class="form-control sign-in-email" placeholder="Email" autocomplete="autocomplete"/>
+                    <div class="invalid-feedback"> </div>
+                    <input class="form-control sign-in-password" type="password" placeholder="Mật khẩu" autocomplete="autocomplete"/>
+                    <div class="invalid-feedback"> </div>
+                    <div class="forgot-password-wrapper"></div>Quên mật khẩu? Nhấn vào <span class="text-btn">đây</span>
+                    <div class="btn btn-primary red-btn sign-in-btn">Đăng nhập</div>
+                  </form>
+                </div>
+                <div class="tab-pane fade" id="signUp" role="tabpanel" aria-labelledby="signUp-tab">
+                  <form>
+                    <input class="form-control sign-up-full-name" placeholder="Họ và tên *" autocomplete="autocomplete"/>
+                    <div class="invalid-feedback"> </div>
+                    <input class="form-control sign-up-phone" placeholder="Số điện thoại *" autocomplete="autocomplete"/>
+                    <div class="invalid-feedback"> </div>
+                    <input class="form-control sign-up-email" placeholder="Email *" autocomplete="autocomplete"/>
+                    <div class="invalid-feedback"> </div>
+                    <input class="form-control sign-up-password" type="password" placeholder="Mật khẩu *" autocomplete="autocomplete"/>
+                    <div class="invalid-feedback"> </div>
+                    <input class="form-control sign-up-confirm-password" type="password" placeholder="Xác nhận mật khẩu *" autocomplete="autocomplete"/>
+                    <div class="invalid-feedback"> </div>
+                    <div class="privacy-confirm"></div>Khi bạn nhấn Đăng ký, bạn đã đồng ý thực hiện mọi giao dịch mua bán theo <span class="text-btn">điều kiện sử dụng và chính sách của OBO Stadium.</span>
+                    <div class="btn btn-primary red-btn sign-up-btn">Đăng kí</div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div><a class="back-to-top" href="#"><img src="./image/back-to-top.png" alt=""/></a>
+    </main>
+
+    <footer class="container-fluid">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="logo col-md-3 col-12 text-md-left text-center"><img class="img-fluid" src="./image/logo-white.png" alt="logo"/></div>
+          <div class="footer-link col-md-9 col-12">
+            <div class="footer-menu d-flex justify-content-md-end align-items-center flex-md-row flex-column"><a class="item" href="./faqs.html">Các câu hỏi thường gặp</a><a class="item" href="./rules.html">Điều khoản</a><a class="item" href="./policy.html">Chính sách</a></div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="top-header container-fluid">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 content"><a href="tel:+84365304675" target="_blank">Hotline: 0365304675</a>
+            <div class="social-icon"><a href="https://www.facebook.com/"><i class="fab fa-facebook-square"></i></a><a href="https://www.instagram.com/obostadium/"><i class="fab fa-instagram"></i></a><a href="https://www.pinterest.com/"><i class="fab fa-pinterest-square"></i></a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="./vendor/jquery/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="./vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Main Js-->
+    <script type="text/javascript" src="./script/main.js"></script>
+    <!-- Currency-->
+    <script type="text/javascript" src="./vendor/currency/currency.min.js"></script>
+    <!-- Card-->
+    <script type="text/javascript" src="./vendor/card/jquery.card.js"></script>
+    <!-- Common-->
+    <script src="./script/except-home-page.js"></script>
+    <script src="./script/size-render.js"></script>
+    <script src="./script/size-choose.js"></script>
+    <script src="./script/buy-page.js"></script>
+  </body>
+</html>

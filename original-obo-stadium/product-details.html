@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" type="text/css" href="./vendor/bootstrap/css/bootstrap.min.css"/>
+    <!-- Slick CSS-->
+    <link rel="stylesheet" type="text/css" href="./vendor/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="./vendor/slick/slick-theme.css"/>
+    <!-- Font Awesome CSS-->
+    <link rel="stylesheet" type="text/css" href="./vendor/fontawesome/css/all.css"/>
+    <!-- Pretty Checkbox CSS-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css"/>
+    <!-- Login Modal-->
+    <link rel="stylesheet" type="text/css" href="./css/components/login-modal.css"/>
+    <!-- Useed in Js-->
+    <link rel="stylesheet" type="text/css" href="./css/used-in-js.css"/>
+    <!-- Components CSS-->
+    <link rel="stylesheet" type="text/css" href="./css/components/header.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/components/products.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/components/index/product-showcase.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/components/product-details/product-info.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/components/product-details/size-choose.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/components/product-details/size-guide-table.css"/>
+    <!-- Common CSS-->
+    <link rel="stylesheet" type="text/css" href="./css/main.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/except-home-page.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/product-details.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/used-in-js.css"/>
+    <title>Chi tiết sản phẩm</title>
+    <link rel="shortcut icon" href="./image/favicon.ico" type="image/x-icon"/>
+  </head>
+  <body>
+    <header class="container-fluid">
+      <nav class="navbar navbar-expand-lg navbar-light container"><a class="navbar-brand" href="./"><img class="img-fluid" src="./image/logo-white.png" alt="logo"/></a>
+        <div class="search-form">
+          <form>
+            <div class="search-input-wrapper">
+              <input class="form-control search-input" type="text" placeholder="Bạn cần tìm gì..."/>
+              <button class="btn btn-primary text-uppercase red-btn search-button" type="submit"><i class="fas fa-search"></i></button>
+            </div>
+          </form>
+        </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse justify-content-md-end text-center" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" id="shop" href="./shop.html">Sản phẩm</a></li>
+            <li class="nav-item"><a class="nav-link" id="news" href="./news.html">Tin tức</a></li>
+            <li class="nav-item"><a class="nav-link account-setting" id="account" href="" data-toggle="modal" data-target="#signInSignUp"></a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <!-- Breadcrum Section-->
+      <div class="breadcrumb container"><a class="previous-page" href="./index.html">Trang ch&#x1EE7;</a><i class="fas fa-chevron-right arrow"></i><a class="previous-page" href="./shop.html">S&#x1EA3;n ph&#x1EA9;m</a><i class="fas fa-chevron-right arrow"></i><span class="current-page">T&ecirc;n s&#x1EA3;n ph&#x1EA9;m</span></div>
+      <!-- Products Content Section-->
+      <section class="product-content-wrapper container">
+        <div class="common-info">
+          <div class="name">Adidas Yeezy Boost 700 Wave Runner Solid Grey</div>
+        </div>
+        <div class="main-info row">
+          <div class="product-image col-lg-6">
+            <div class="slider slider-for">
+              <div class="img-zoom-container"><img class="img-fluid" src="./image/product-details-image/1.jpg" alt="image-1"/></div>
+              <div class="img-zoom-container"><img class="img-fluid" src="./image/product-details-image/2.jpg" alt="image-2"/></div>
+              <div class="img-zoom-container"><img class="img-fluid" src="./image/product-details-image/3.jpg" alt="image-3"/></div>
+              <div class="img-zoom-container"><img class="img-fluid" src="./image/product-details-image/4.jpg" alt="image-5"/></div>
+              <div class="img-zoom-container"><img class="img-fluid" src="./image/product-details-image/5.jpg" alt="image-5"/></div>
+            </div>
+            <div class="slider slider-nav">
+              <div><img class="img-fluid" src="./image/product-details-image/1.jpg" alt="image-1"/></div>
+              <div><img class="img-fluid" src="./image/product-details-image/2.jpg" alt="image-2"/></div>
+              <div><img class="img-fluid" src="./image/product-details-image/3.jpg" alt="image-3"/></div>
+              <div><img class="img-fluid" src="./image/product-details-image/4.jpg" alt="image-4"/></div>
+              <div><img class="img-fluid" src="./image/product-details-image/5.jpg" alt="image-5"/></div>
+            </div>
+          </div>
+          <div class="product-info col-lg-6">
+            <div class="title h4">Mô tả sản phẩm</div>
+            <div class="desc">
+              <p>
+                Trend &ldquo;dad shoes&rdquo; &dstrok;ang g&acirc;y b&atilde;o trong gi&#x1EDB;i tr&#x1EBB; hi&#x1EC7;n nay va&#x300; m&acirc;&#x303;u gi&agrave;y Yeezy 700 Wave Runner
+                Solid Grey cu&#x303;ng go&#x301;p ph&acirc;&#x300;n
+                ta&#x323;o n&ecirc;n s&#x1B0;&#x301;c hu&#x301;t cho c&#x1A1;n s&ocirc;&#x301;t na&#x300;y, khi&ecirc;&#x301;n gi&#x1A1;&#x301;i s&abreve;n gia&#x300;y &dstrok;&#x1B0;&#x301;ng ng&ocirc;&#x300;i kh&ocirc;ng y&ecirc;n. Ki&#x1EC3;u
+                d&aacute;ng c&#x1EE7;a Yeezy 700 Wave Runner Solid Grey ch&#x1ECB;u s&#x1EF1; &#x1EA3;nh h&#x1B0;&#x1EDF;ng c&#x1EE7;a nh&#x1EEF;ng m&#x1EAB;u &ldquo;dad shoes&rdquo; v&agrave;
+                cross-trainer, hi&#x1EC7;n &dstrok;ang
+                l&agrave; 2 xu h&#x1B0;&#x1EDB;ng sneaker &dstrok;&#x1B0;&#x1EE3;c &#x1B0;a th&iacute;ch trong nh&#x1EEF;ng n&abreve;m g&#x1EA7;n &dstrok;&acirc;y. &Dstrok;&#x1EBF; gi&agrave;y &dstrok;&#x1EAD;m ch&#x1EA5;t chunky sneaker
+                v&agrave; thi&#x1EBF;t k&#x1EBF; retro, &dstrok;i c&ugrave;ng
+                b&#x1EA3;n ph&#x1ED1;i x&aacute;m / xanh / cam &dstrok;&atilde; d&#x1EC5; d&agrave;ng th&ocirc;&#x309;i &ldquo;bu&#x300;a y&ecirc;u&rdquo; va&#x300;o gi&#x1A1;&#x301;i y&ecirc;u gi&agrave;y.
+              </p>
+              <p>
+                Ph&acirc;&#x300;n upper s&#x1B0;&#x309; du&#x323;ng ch&#x1EA5;t li&#x1EC7;u breathable mesh, suede v&agrave; nubuck. &Dstrok;i&ecirc;&#x309;m nh&acirc;&#x301;n &acirc;&#x301;n t&#x1B0;&#x1A1;&#x323;ng
+                chi&#x301;nh la&#x300; thi&#x1EBF;t k&#x1EBF; l&agrave; d&acirc;y gi&agrave;y
+                m&agrave;u neon &dstrok;i k&egrave;m m&#x1ED9;t s&#x1ED1; chi ti&#x1EBF;t &dstrok;&#x1B0;&#x1EE3;c l&agrave;m b&#x1EB1;ng ch&#x1EA5;t li&#x1EC7;u 3M ph&#x1EA3;n quang. V&#x1EDB;i b&#x1ED9; &dstrok;&#x1EBF; boost n&#x1ED5;i
+                ti&#x1EBF;ng v&agrave; form gi&agrave;y r&#x1ED9;ng r&atilde;i, Yeezy 700 Wave Runner Solid Grey mang &dstrok;&ecirc;&#x301;n c&#x1EA3;m gi&aacute;c d&#x1EC5; ch&#x1ECB;u
+                nh&#x1EA5;t cho
+                ng&#x1B0;&#x1EDD;i mang. C&ocirc;&#x323;ng ngh&ecirc;&#x323; Boost v&#x1A1;&#x301;i t&acirc;&#x301;m &dstrok;&ecirc;&#x323;m lo&#x301;t &ldquo;th&acirc;&#x300;n tha&#x301;nh&rdquo; &ecirc;m a&#x301;i, ba&#x323;n c&oacute; th&#x1EC3; mang
+                &dstrok;&ocirc;i gi&agrave;y n&agrave;y t&#x1EEB; s&aacute;ng &dstrok;&#x1EBF;n t&#x1ED1;i
+                m&agrave; kh&ocirc;ng h&#x1EC1; c&oacute; c&#x1EA3;m gi&aacute;c kh&oacute; ch&#x1ECB;u hay bi&#x301; ba&#x301;ch. Kh&ocirc;ng nh&#x1EEF;ng hype m&agrave; c&ograve;n comfy n&#x1EEF;a.
+              </p>
+            </div>
+            <div class="desc-sub"><span class="desc-sub-title">Hãng: </span><span>Adidas</span></div>
+            <div class="desc-sub"><span class="desc-sub-title">Đã bán:</span><span>135 đôi</span></div>
+            <div class="desc-sub"><span class="desc-sub-title">Tình trạng:</span><span>Còn hàng</span></div>
+            <div class="btns">
+              <div class="size-btn" data-toggle="modal" data-target="#sizeChooseModal">
+                <button class="btn btn-primary size trans-btn"><span class="size-text">Size</span><span class="size-details">9US | 42.5VN | 26.2CM</span><i class="fas fa-chevron-down dropdown-arrow"></i></button>
+              </div><a class="buy-btn" href="./buy-page.html">
+                <button class="btn btn-primary buy red-btn">
+                  <div class="ask-text left-content">
+                    <div class="ask-desc sub-content">Giá bán ưu đãi</div>
+                    <div class="ask-price main-content">9.555.000 &#x20AB;</div>
+                  </div>
+                  <div class="buy-text right-content">
+                    <div class="buy-now main-content">Mua ngay</div>
+                  </div>
+                </button></a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="break-section container-fluid"></div>
+      <div class="instagram-image container">
+        <div class="row">
+          <div class="col-12">
+            <div class="title">
+              <h2 class="h2">H&igrave;nh ảnh on feet</h2>
+              <p class="sub-title">H&atilde;y tag ch&uacute;ng t&ocirc;i @obostadium</p>
+            </div>
+            <div class="slide-btn"></div>
+          </div>
+        </div>
+        <div id="instafeed">
+          <div class="col-lg-3 instaimg">
+            <div class="instaimg-wrap">
+              <img src="./image/onfeet/onfeet1.jpg" alt="" class="img-fluid insta-img">
+            </div>
+          </div>
+          <div class="col-lg-3 instaimg">
+            <div class="instaimg-wrap">
+              <img src="./image/onfeet/onfeet2.jpg" alt="" class="img-fluid insta-img">
+            </div>
+          </div>
+          <div class="col-lg-3 instaimg">
+            <div class="instaimg-wrap">
+              <img src="./image/onfeet/onfeet3.jpg" alt="" class="img-fluid insta-img">
+            </div>
+          </div>
+          <div class="col-lg-3 instaimg">
+            <div class="instaimg-wrap">
+              <img src="./image/onfeet/onfeet4.jpg" alt="" class="img-fluid insta-img">
+            </div>
+          </div>
+          <div class="col-lg-3 instaimg">
+            <div class="instaimg-wrap">
+              <img src="./image/onfeet/onfeet5.jpg" alt="" class="img-fluid insta-img">
+            </div>
+          </div>
+          <div class="col-lg-3 instaimg">
+            <div class="instaimg-wrap">
+              <img src="./image/onfeet/onfeet6.jpg" alt="" class="img-fluid insta-img">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="break-section container-fluid"></div>
+      <section class="products-showcase container">
+        <div class="row">
+          <div class="title col-12">
+            <h2 class="h2">SẢN PHẨM LIÊN QUAN</h2>
+          </div>
+        </div>
+        <div class="row product-row d-flex justify-content-md-between">
+          <a class="product product-link position-relative" id="3" href="./product-details.html">
+            <div class="card">
+              <img src="./image/product/asics/Asics-Gel-Lyte-III-Ronnie-Fieg-Super-Green.jpg" class="card-img-top"
+                   alt="">
+              <div class="card-body">
+                <h5 class="card-title">Adidas Yeezy Boost 350 V2 Lundmark (Non</h5>
+                <p class="price">7.200.000 ₫</p>
+                <p class="card-text sold">Đã bán 12 đôi</p>
+              </div>
+            </div>
+            <div class="shadow mx-auto position-absolute"></div>
+          </a>
+          <a class="product product-link position-relative" id="5" href="./product-details.html">
+            <div class="card">
+              <img src="./image/product/adidas/Adidas-NMD-R1-Japan-Triple-White-Product.jpg" class="card-img-top"
+                   alt="">
+              <div class="card-body">
+                <h5 class="card-title">Jordan 1 Retro Low OG SP Travis Scott</h5>
+                <p class="price">5.200.000 ₫</p>
+                <p class="card-text sold">Đã bán 122 đôi</p>
+              </div>
+            </div>
+            <div class="shadow mx-auto position-absolute"></div>
+          </a>
+          <a class="product product-link position-relative" id="4" href="./product-details.html">
+            <div class="card">
+              <img src="./image/product/asics/Asics-Gel-Lyte-III-Ronnie-Fieg-Super-Green.jpg" class="card-img-top"
+                   alt="">
+              <div class="card-body">
+                <h5 class="card-title">Adidas Yeezy Boost 350 V2 Lundmark (Non</h5>
+                <p class="price">7.200.000 ₫</p>
+                <p class="card-text sold">Đã bán 58 đôi</p>
+              </div>
+            </div>
+            <div class="shadow mx-auto position-absolute"></div>
+          </a>
+          <a class="product product-link position-relative" id="2" href="./product-details.html">
+            <div class="card">
+              <img src="./image/product/asics/Asics-Gel-Lyte-III-Concepts-Boston-Tea-Party.jpg" class="card-img-top"
+                   alt="">
+              <div class="card-body">
+                <h5 class="card-title">Air Jordan 1 Mid Yellow Toe Black</h5>
+                <p class="price">1.500.000 ₫</p>
+                <p class="card-text sold">Đã bán 85 đôi</p>
+              </div>
+            </div>
+            <div class="shadow mx-auto position-absolute"></div>
+          </a>
+          <a class="product product-link position-relative" id="1" href="./product-details.html">
+            <div class="card">
+              <img src="./image/product/asics/Asics-Gel-Lyte-III-Afew-Koi.jpg" class="card-img-top"
+                   alt="">
+              <div class="card-body">
+                <h5 class="card-title">Nike SB Dunk Low Parran</h5>
+                <p class="price">6.200.000 ₫</p>
+                <p class="card-text sold">Đã bán 122 đôi</p>
+              </div>
+            </div>
+            <div class="shadow mx-auto position-absolute"></div>
+          </a>
+        </div>
+      </section>
+      <!-- Modals-->
+      <div class="modal fade" id="sizeChooseModal" tabindex="-1" role="dialog" aria-labelledby="sizeChooseModalTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="sizeChooseModalTitle">Chọn size</h5><a class="size-guide text-btn" data-toggle="modal" href="#sizeGuideModal" data-dismiss="modal">Bảng size</a>
+            </div>
+            <div class="modal-body">
+              <div class="size content">
+                <div class="select-filter">
+                  <div class="item cross" data-size="2.5US | 35VN | 21.3CM" data-id="35">
+                    35
+                  </div>
+                  <div class="item cross" data-size="3.5US | 36VN | 22.2CM" data-id="36">
+                    36
+                  </div>
+                  <div class="item cross" data-size="4.5US | 37VN | 23CM" data-id="37">
+                    37
+                  </div>
+                  <div class="item cross" data-size="5.5US | 38VN | 23.8CM" data-id="38">
+                    38
+                  </div>
+                  <div class="item size-choose" data-size="6.5US | 39VN | 24.6CM" data-id="39">
+                    39
+                  </div>
+                  <div class="item" data-size="7.5US | 40VN | 25.4CM" data-id="40">
+                    40
+                  </div>
+                  <div class="item cross" data-size="8.5US | 41VN | 26.2CM" data-id="41">
+                    41
+                  </div>
+                  <div class="item cross" data-size="9.5US | 42VN | 27.1CM" data-id="42">
+                    42
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="sizeGuideModal" tabindex="-1" role="dialog" aria-labelledby="sizeGuideModalTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable" role="document">
+          <div class="modal-content">
+            <div class="modal-header"><a class="go-back-size-choose text-btn" data-toggle="modal" href="#sizeChooseModal" data-dismiss="modal"><i class="fas fa-chevron-left"></i> Trở lại</a>
+              <h5 class="modal-title" id="sizeGuideModalTitle">Bảng size</h5>
+            </div>
+            <div class="modal-body">
+              <table class="side-guide-table table">
+                <thead>
+                  <tr>
+                    <th>CM</th>
+                    <th>VN/EU</th>
+                    <th>US</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>23.7</td>
+                    <td>38.5</td>
+                    <td>6</td>
+                  </tr>
+                  <tr>
+                    <td>23.7</td>
+                    <td>38.5</td>
+                    <td>6</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Modals-->
+      <div class="modal fade" id="signInSignUp" tabindex="-1" role="dialog" aria-labelledby="signInSignUpLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <ul class="nav nav-pills" id="pills-tab" role="tablist">
+                <li class="nav-item"><a class="nav-link active" id="signIn-tab" data-toggle="pill" href="#signIn" role="tab" aria-controls="signIn" aria-selected="true">Đăng nhập</a></li>
+                <li class="nav-item"><a class="nav-link" id="signUp-tab" data-toggle="pill" href="#signUp" role="tab" aria-controls="signUp" aria-selected="false">Đăng ký</a></li>
+              </ul>
+            </div>
+            <div class="modal-body">
+              <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="signIn" role="tabpanel" aria-labelledby="signIn-tab">
+                  <form>
+                    <input class="form-control sign-in-email" placeholder="Email" autocomplete="autocomplete"/>
+                    <div class="invalid-feedback"> </div>
+                    <input class="form-control sign-in-password" type="password" placeholder="Mật khẩu" autocomplete="autocomplete"/>
+                    <div class="invalid-feedback"> </div>
+                    <div class="forgot-password-wrapper"></div>Quên mật khẩu? Nhấn vào <span class="text-btn">đây</span>
+                    <div class="btn btn-primary red-btn sign-in-btn">Đăng nhập</div>
+                  </form>
+                </div>
+                <div class="tab-pane fade" id="signUp" role="tabpanel" aria-labelledby="signUp-tab">
+                  <form>
+                    <input class="form-control sign-up-full-name" placeholder="Họ và tên *" autocomplete="autocomplete"/>
+                    <div class="invalid-feedback"> </div>
+                    <input class="form-control sign-up-phone" placeholder="Số điện thoại *" autocomplete="autocomplete"/>
+                    <div class="invalid-feedback"> </div>
+                    <input class="form-control sign-up-email" placeholder="Email *" autocomplete="autocomplete"/>
+                    <div class="invalid-feedback"> </div>
+                    <input class="form-control sign-up-password" type="password" placeholder="Mật khẩu *" autocomplete="autocomplete"/>
+                    <div class="invalid-feedback"> </div>
+                    <input class="form-control sign-up-confirm-password" type="password" placeholder="Xác nhận mật khẩu *" autocomplete="autocomplete"/>
+                    <div class="invalid-feedback"> </div>
+                    <div class="privacy-confirm"></div>Khi bạn nhấn Đăng ký, bạn đã đồng ý thực hiện mọi giao dịch mua bán theo <span class="text-btn">điều kiện sử dụng và chính sách của OBO Stadium.</span>
+                    <div class="btn btn-primary red-btn sign-up-btn">Đăng kí</div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div><a class="back-to-top" href="#"><img src="./image/back-to-top.png" alt=""/></a>
+    </main>
+    <footer class="container-fluid">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="logo col-md-3 col-12 text-md-left text-center"><img class="img-fluid" src="./image/logo-white.png" alt="logo"/></div>
+          <div class="footer-link col-md-9 col-12">
+            <div class="footer-menu d-flex justify-content-md-end align-items-center flex-md-row flex-column"><a class="item" href="./faqs.html">Các câu hỏi thường gặp</a><a class="item" href="./rules.html">Điều khoản</a><a class="item" href="./policy.html">Chính sách</a></div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="top-header container-fluid">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 content"><a href="tel:+84365304675" target="_blank">Hotline: 0365304675</a>
+            <div class="social-icon"><a href="https://www.facebook.com/"><i class="fab fa-facebook-square"></i></a><a href="https://www.instagram.com/obostadium/"><i class="fab fa-instagram"></i></a><a href="https://www.pinterest.com/"><i class="fab fa-pinterest-square"></i></a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="./vendor/jquery/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="./vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Main Js-->
+    <script type="text/javascript" src="./script/main.js"></script>
+    <!-- Image Zoom Js-->
+    <script src="./vendor/zoom-master/jquery.zoom.min.js" type="text/javascript">
+      <!-- Currency-->
+    </script>
+    <script type="text/javascript" src="./vendor/currency/currency.min.js"></script>
+    <!-- Slick Js-->
+    <script type="text/javascript" src="./vendor/slick/slick.min.js"></script>
+    <!--Instafeed Js-->
+    <script type="text/javascript" src="./vendor/instafeed/instafeed.min.js"></script>
+    <!-- Common Js-->
+    <script src="./script/except-home-page.js"></script>
+    <script src="./script/size-render.js"></script>
+    <script src="./script/size-choose.js"></script>
+    <script src="./script/product-details.js"></script>
+  </body>
+</html>
