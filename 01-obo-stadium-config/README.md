@@ -1,6 +1,6 @@
-#Bước 1: Dựng khung project + cấu hình
+# Bước 1: Dựng khung project + cấu hình
 
-####Cấu trúc project
+#### Cấu trúc project
 - **config**: chứa các lớp cấu hình 
 - **controller**: chứa các lớp controller
 - **model**: chứa các lớp trung gian được sử dụng làm cấu trúc request, response, dto
@@ -37,7 +37,7 @@
      └───templates
 ```
  
-####Danh sách dependency cần thiết
+#### Danh sách dependency cần thiết
 1. **spring-boot-starter-web**
 2. **spring-boot-starter-thymeleaf**
 3. **spring-boot-starter-data-jpa**
@@ -51,7 +51,7 @@
 11. **lombok**
 12. **spring-boot-starter-test**
 
-####Cấu hình application.properties 
+#### Cấu hình application.properties 
 ```xml
 #Cấu hình port 
 server.port=8081
@@ -75,5 +75,5 @@ spring.thymeleaf.cache=false
 spring.thymeleaf.prefix=file:src/main/resources/templates/
 ```
 
-####Tham khảo
+#### Tham khảo
 https://codeboje.de/jackson-java-8-datetime-handling/
