@@ -5,7 +5,7 @@
 <br>
 
 ####Source code template (đã chỉnh sửa)
-[Xem tại đây](../normal-obo-stadium) 
+[Xem tại đây](../original-obo-stadium) 
 
 ####Sơ đồ các trang thuộc website tĩnh
 ![Cấu trúc trang web tĩnh](../images/ui-diagram.PNG)
