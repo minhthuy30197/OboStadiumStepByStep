@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{/layout/layout :: main-fragment(
+                                                ~{:: title},
+                                                'full-header',
+                                                ~{:: #css-resources},
+                                                ~{:: #js-resources},
+                                                ~{:: #main-content}
+                                               )}">
+
+    <head>
+        <title>Trang chủ</title>
+
+        <th:block id="css-resources">
+            <link rel="stylesheet" type="text/css" th:href="@{/css/index.css}"/>
+            <link rel="stylesheet" type="text/css" th:href="@{/css/components/products.css}"/>
+            <link rel="stylesheet" type="text/css" th:href="@{/css/components/lastest-news.css}"/>
+            <link rel="stylesheet" type="text/css" th:href="@{/css/components/index/index-newsletter.css}"/>
+            <link rel="stylesheet" type="text/css" th:href="@{/css/components/index/index-category.css}"/>
+            <link rel="stylesheet" type="text/css" th:href="@{/css/components/index/product-showcase.css}"/>
+        </th:block>
+    </head>
+    <body>
+        <main id="main-content">
+            <!-- New Products-->
+            <section class="products-showcase under-retail container">
+                <div class="row">
+                    <div class="title col-12">
+                        <h2 class="h2">Đập hộp hàng mới</h2><a class="see-more-btn-text text-uppercase" href="/san-pham">Xem Th&ecirc;m</a>
+                    </div>
+                </div>
+                <div class="row product-row d-flex justify-content-md-between">
+                    <a href="/san-pham/abc/123" class="product-link" id ="1">
+                        <div class="product position-relative">
+                            <div class="card"><img class="card-img-top" th:src="@{/image/product/adidas-Yeezy-Boost-350-V2-Lundmark-Product.png}" alt="adidas-Yeezy-Boost-350-V2-Lundmark"/>
+                                <div class="card-body">
+                                    <h5 class="card-title">Adidas Yeezy Boost 350 V2 Lundmark (Non</h5>
+                                    <p class="price">7.200.000 &#x20AB;</p>
+                                    <p class="card-text sold">&Dstrok;&atilde; b&aacute;n 1963 &dstrok;&ocirc;i</p>
+                                </div>
+                            </div>
+                            <div class="shadow mx-auto position-absolute"></div>
+                        </div>
+                    </a>
+                    <a href="/san-pham/abc/123" class="product-link" id ="2">
+                        <div class="product position-relative">
+                            <div class="card"><img class="card-img-top" th:src="@{/image/product/adidas/adidas-NMD-Hu-Pharrell-Mother-Product.jpg}" alt="adidas-Yeezy-Boost-350-V2-Lundmark"/>
+                                <div class="card-body">
+                                    <h5 class="card-title">Jordan 4 Retro Cool Grey (2019)</h5>
+                                    <p class="price">4.810.000 &#x20AB;</p>
+                                    <p class="card-text sold">&Dstrok;&atilde; b&aacute;n 1312 &dstrok;&ocirc;i</p>
+                                </div>
+                            </div>
+                            <div class="shadow mx-auto position-absolute"></div>
+                        </div>
+                    </a>
+                    <a href="/san-pham/abc/123" class="product-link" id ="3">
+                        <div class="product position-relative">
+                            <div class="card"><img class="card-img-top" th:src="@{/image/product/adidas/Adidas-NMD-R1-Japan-Triple-White-Product.jpg}" alt="adidas-Yeezy-Boost-350-V2-Lundmark"/>
+                                <div class="card-body">
+                                    <h5 class="card-title">Jordan 1 Retro Low OG SP Travis Scott</h5>
+                                    <p class="price">20.790.000 &#x20AB;</p>
+                                    <p class="card-text sold">&Dstrok;&atilde; b&aacute;n 2246 &dstrok;&ocirc;i</p>
+                                </div>
+                            </div>
+                            <div class="shadow mx-auto position-absolute"></div>
+                        </div>
+                    </a>
+                    <a href="/san-pham/abc/123" class="product-link" id ="4">
+                        <div class="product position-relative">
+                            <div class="card"><img class="card-img-top" th:src="@{/image/product/asics/Asics-Gel-Lyte-III-Concepts-Boston-Tea-Party.jpg}" alt="adidas-Yeezy-Boost-350-V2-Lundmark"/>
+                                <div class="card-body">
+                                    <h5 class="card-title">Air Jordan 1 Mid Yellow Toe Black</h5>
+                                    <p class="price">3.740.000 &#x20AB;</p>
+                                    <p class="card-text sold">&Dstrok;&atilde; b&aacute;n 564 &dstrok;&ocirc;i</p>
+                                </div>
+                            </div>
+                            <div class="shadow mx-auto position-absolute"></div>
+                        </div>
+                    </a>
+                    <a href="/san-pham/abc/123" class="product-link" id ="5">
+                        <div class="product position-relative">
+                            <div class="card"><img class="card-img-top" th:src="@{/image/product/asics/Asics-Gel-Lyte-III-Afew-Koi.jpg}" alt="adidas-Yeezy-Boost-350-V2-Lundmark"/>
+                                <div class="card-body">
+                                    <h5 class="card-title">Nike SB Dunk Low Parra</h5>
+                                    <p class="price">6.620.000 &#x20AB;</p>
+                                    <p class="card-text sold">&Dstrok;&atilde; b&aacute;n 1456 &dstrok;&ocirc;i</p>
+                                </div>
+                            </div>
+                            <div class="shadow mx-auto position-absolute"></div>
+                        </div>
+                    </a>
+                </div>
+            </section>
+            <!-- Break Banner-->
+            <section class="break-banner"><a href="/san-pham"><img class="img-fluid" id="promo-banner-1" th:src="@{/image/banner/promo-banner-1-lg.png}" alt="promo-banner-1"/></a></section>
+            <!-- Best seller -->
+            <section class="products-showcase best-seller container">
+                <div class="row">
+                    <div class="title col-12">
+                        <h2 class="h2">Sản phẩm bán chạy</h2><a class="see-more-btn-text text-uppercase" href="/san-pham">Xem Th&ecirc;m</a>
+                    </div>
+                </div>
+                <div class="row product-row d-flex justify-content-md-between">
+                    <a href="/san-pham/abc/123" class="product-link" id ="1">
+                        <div class="product position-relative">
+                            <div class="card"><img class="card-img-top" th:src="@{/image/product/adidas-Yeezy-Boost-350-V2-Lundmark-Product.png}" alt="adidas-Yeezy-Boost-350-V2-Lundmark"/>
+                                <div class="card-body">
+                                    <h5 class="card-title">Adidas Yeezy Boost 350 V2 Lundmark (Non</h5>
+                                    <p class="price">7.200.000 &#x20AB;</p>
+                                    <p class="card-text sold">&Dstrok;&atilde; b&aacute;n 1963 &dstrok;&ocirc;i</p>
+                                </div>
+                            </div>
+                            <div class="shadow mx-auto position-absolute"></div>
+                        </div>
+                    </a>
+                    <a href="/san-pham/abc/123" class="product-link" id ="2">
+                        <div class="product position-relative">
+                            <div class="card"><img class="card-img-top" th:src="@{/image/product/adidas/adidas-NMD-Hu-Pharrell-Mother-Product.jpg}" alt="adidas-Yeezy-Boost-350-V2-Lundmark"/>
+                                <div class="card-body">
+                                    <h5 class="card-title">Jordan 4 Retro Cool Grey (2019)</h5>
+                                    <p class="price">4.810.000 &#x20AB;</p>
+                                    <p class="card-text sold">&Dstrok;&atilde; b&aacute;n 1312 &dstrok;&ocirc;i</p>
+                                </div>
+                            </div>
+                            <div class="shadow mx-auto position-absolute"></div>
+                        </div>
+                    </a>
+                    <a href="/san-pham/abc/123" class="product-link" id ="3">
+                        <div class="product position-relative">
+                            <div class="card"><img class="card-img-top" th:src="@{/image/product/adidas/Adidas-NMD-R1-Japan-Triple-White-Product.jpg}" alt="adidas-Yeezy-Boost-350-V2-Lundmark"/>
+                                <div class="card-body">
+                                    <h5 class="card-title">Jordan 1 Retro Low OG SP Travis Scott</h5>
+                                    <p class="price">20.790.000 &#x20AB;</p>
+                                    <p class="card-text sold">&Dstrok;&atilde; b&aacute;n 2246 &dstrok;&ocirc;i</p>
+                                </div>
+                            </div>
+                            <div class="shadow mx-auto position-absolute"></div>
+                        </div>
+                    </a>
+                    <a href="/san-pham/abc/123" class="product-link" id ="4">
+                        <div class="product position-relative">
+                            <div class="card"><img class="card-img-top" th:src="@{/image/product/asics/Asics-Gel-Lyte-III-Concepts-Boston-Tea-Party.jpg}" alt="adidas-Yeezy-Boost-350-V2-Lundmark"/>
+                                <div class="card-body">
+                                    <h5 class="card-title">Air Jordan 1 Mid Yellow Toe Black</h5>
+                                    <p class="price">3.740.000 &#x20AB;</p>
+                                    <p class="card-text sold">&Dstrok;&atilde; b&aacute;n 564 &dstrok;&ocirc;i</p>
+                                </div>
+                            </div>
+                            <div class="shadow mx-auto position-absolute"></div>
+                        </div>
+                    </a>
+                    <a href="/san-pham/abc/123" class="product-link" id ="5">
+                        <div class="product position-relative">
+                            <div class="card"><img class="card-img-top" th:src="@{/image/product/asics/Asics-Gel-Lyte-III-Afew-Koi.jpg}" alt="adidas-Yeezy-Boost-350-V2-Lundmark"/>
+                                <div class="card-body">
+                                    <h5 class="card-title">Nike SB Dunk Low Parra</h5>
+                                    <p class="price">6.620.000 &#x20AB;</p>
+                                    <p class="card-text sold">&Dstrok;&atilde; b&aacute;n 1456 &dstrok;&ocirc;i</p>
+                                </div>
+                            </div>
+                            <div class="shadow mx-auto position-absolute"></div>
+                        </div>
+                    </a>
+                </div>
+            </section>
+            <!-- Break Banner-->
+            <section class="break-banner"><a href="/san-pham"><img class="img-fluid" id="promo-banner-2" th:src="@{/image/banner/promo-banner-2-lg.png}" alt="promo-banner-2"/></a></section>
+            <!-- Staff Selects -->
+            <section class="products-showcase staffs-choose container">
+                <div class="row">
+                    <div class="title col-12">
+                        <h2 class="h2">OBO LỰA CHỌN</h2><a class="see-more-btn-text text-uppercase" href="/san-pham">Xem Th&ecirc;m</a>
+                    </div>
+                </div>
+                <div class="row product-row d-flex justify-content-md-between">
+                    <a href="/san-pham/abc/123" class="product-link" id ="1">
+                        <div class="product position-relative">
+                            <div class="card"><img class="card-img-top" th:src="@{/image/product/adidas-Yeezy-Boost-350-V2-Lundmark-Product.png}" alt="adidas-Yeezy-Boost-350-V2-Lundmark"/>
+                                <div class="card-body">
+                                    <h5 class="card-title">Adidas Yeezy Boost 350 V2 Lundmark (Non</h5>
+                                    <p class="price">7.200.000 &#x20AB;</p>
+                                    <p class="card-text sold">&Dstrok;&atilde; b&aacute;n 1963 &dstrok;&ocirc;i</p>
+                                </div>
+                            </div>
+                            <div class="shadow mx-auto position-absolute"></div>
+                        </div>
+                    </a>
+                    <a href="/san-pham/abc/123" class="product-link" id ="2">
+                        <div class="product position-relative">
+                            <div class="card"><img class="card-img-top" th:src="@{/image/product/adidas/adidas-NMD-Hu-Pharrell-Mother-Product.jpg}" alt="adidas-Yeezy-Boost-350-V2-Lundmark"/>
+                                <div class="card-body">
+                                    <h5 class="card-title">Jordan 4 Retro Cool Grey (2019)</h5>
+                                    <p class="price">4.810.000 &#x20AB;</p>
+                                    <p class="card-text sold">&Dstrok;&atilde; b&aacute;n 1312 &dstrok;&ocirc;i</p>
+                                </div>
+                            </div>
+                            <div class="shadow mx-auto position-absolute"></div>
+                        </div>
+                    </a>
+                    <a href="/san-pham/abc/123" class="product-link" id ="3">
+                        <div class="product position-relative">
+                            <div class="card"><img class="card-img-top" th:src="@{/image/product/adidas/Adidas-NMD-R1-Japan-Triple-White-Product.jpg}" alt="adidas-Yeezy-Boost-350-V2-Lundmark"/>
+                                <div class="card-body">
+                                    <h5 class="card-title">Jordan 1 Retro Low OG SP Travis Scott</h5>
+                                    <p class="price">20.790.000 &#x20AB;</p>
+                                    <p class="card-text sold">&Dstrok;&atilde; b&aacute;n 2246 &dstrok;&ocirc;i</p>
+                                </div>
+                            </div>
+                            <div class="shadow mx-auto position-absolute"></div>
+                        </div>
+                    </a>
+                    <a href="/san-pham/abc/123" class="product-link" id ="4">
+                        <div class="product position-relative">
+                            <div class="card"><img class="card-img-top" th:src="@{/image/product/asics/Asics-Gel-Lyte-III-Concepts-Boston-Tea-Party.jpg}" alt="adidas-Yeezy-Boost-350-V2-Lundmark"/>
+                                <div class="card-body">
+                                    <h5 class="card-title">Air Jordan 1 Mid Yellow Toe Black</h5>
+                                    <p class="price">3.740.000 &#x20AB;</p>
+                                    <p class="card-text sold">&Dstrok;&atilde; b&aacute;n 564 &dstrok;&ocirc;i</p>
+                                </div>
+                            </div>
+                            <div class="shadow mx-auto position-absolute"></div>
+                        </div>
+                    </a>
+                    <a href="/san-pham/abc/123" class="product-link" id ="5">
+                        <div class="product position-relative">
+                            <div class="card"><img class="card-img-top" th:src="@{/image/product/asics/Asics-Gel-Lyte-III-Afew-Koi.jpg}" alt="adidas-Yeezy-Boost-350-V2-Lundmark"/>
+                                <div class="card-body">
+                                    <h5 class="card-title">Nike SB Dunk Low Parra</h5>
+                                    <p class="price">6.620.000 &#x20AB;</p>
+                                    <p class="card-text sold">&Dstrok;&atilde; b&aacute;n 1456 &dstrok;&ocirc;i</p>
+                                </div>
+                            </div>
+                            <div class="shadow mx-auto position-absolute"></div>
+                        </div>
+                    </a>
+                </div>
+            </section>
+            <!-- Break Banner-->
+            <section class="break-banner"><a href="/san-pham"><img class="img-fluid" id="promo-banner-3" th:src="@{/image/banner/promo-banner-3-lg.png}" alt="promo-banner-3"/></a></section>
+            <!-- Category Section-->
+            <section class="categories-showcase container">
+                <div class="row">
+                    <div class="title col-12">
+                        <h2 class="h2">B&#x1ED9; S&#x1B0;u T&#x1EAD;p</h2>
+                    </div>
+                </div>
+                <div class="row categories-row d-flex justify-content-md-between">
+                    <div class="category col-sm-4"><a class="category-wrap" href="./shop.html"><img class="img-fluid" src="./image/categories/category-1.png" alt="category-1"/>
+                        <div class="tag">TECH PERFORMANCE</div></a></div>
+                    <div class="category col-sm-4"><a class="category-wrap" href="./shop.html"><img class="img-fluid" src=" ./image/categories/category-2.png" alt="category-2"/>
+                        <div class="tag">OFF-WHITE</div></a></div>
+                    <div class="category col-sm-4"><a class="category-wrap" href="./shop.html"><img class="img-fluid" src=" ./image/categories/category-3.png" alt="category-3"/>
+                        <div class="tag">SUPREME</div></a></div>
+                    <div class="category col-sm-4"><a class="category-wrap" href="./shop.html"><img class="img-fluid" src=" ./image/categories/category-4.png" alt="category-4"/>
+                        <div class="tag">NBA</div></a></div>
+                    <div class="category col-sm-4"><a class="category-wrap" href="./shop.html"><img class="img-fluid" src=" ./image/categories/category-5.png" alt="category-5"/>
+                        <div class="tag">YEEZY</div></a></div>
+                    <div class="category col-sm-4" id="last-category"><a class="category-wrap" href="./shop.html"><img class="img-fluid" src=" ./image/categories/category-6.png" alt="category-6"/>
+                        <div class="tag">Comme Des Gar&ccedil;ons</div></a></div>
+                </div>
+            </section>
+            <!-- Newsletter Section-->
+            <section class="newsletter container-fluid d-flex justify-content-center">
+                <div class="newsletter-form-wrapper">
+                    <div class="title">&Dstrok;&abreve;ng k&yacute; nh&#x1EAD;n b&#x1EA3;n tin OBO Stadium</div>
+                    <div class="sub-title">H&atilde;y &dstrok;&abreve;ng k&yacute; &dstrok;&#x1EC3; nh&#x1EAD;n tin m&#x1EDB;i nhanh nh&#x1EA5;t qua email</div>
+                    <div class="newsletter-form d-flex">
+                        <form class="d-flex w-100 justify-content-between flex-column flex-md-row">
+                            <input class="form-control" type="text" placeholder="Nhập địa chỉ email của bạn"/>
+                            <button class="btn btn-primary text-uppercase red-btn" type="submit">&dstrok;&abreve;ng k&yacute;</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+            <!-- Lastest News Section-->
+            <section class="latest-news container">
+                <div class="row">
+                    <div class="title col-12">
+                        <h2 class="h2">B&agrave;i vi&#x1EBF;t m&#x1EDB;i</h2><a class="see-more-btn-text text-uppercase" href="/tin-tuc">Xem Th&ecirc;m</a>
+                    </div>
+                </div>
+                <div class="carousel">
+                    <a class="news position-relative" href="/tin-tuc/abc/1">
+                        <div class="card"><img class="card-img-top" th:src="@{/image/news/news-1-thumnails.jpg}" alt="news-1"/>
+                            <div class="card-body">
+                                <h5 class="card-title">Pack “Logo Sketch” với branding mộc mạc trên Air Max 97 và&nbsp;Air&nbsp;Max Plus</h5>
+                                <p class="card-text news-short-desc">Cùng đến với mẫu branding kiểu phác thảo, đầy mộc mạc và “blend" hoàn hảo cùng tổng thể phối màu.</p>
+                                <p class="card-text author">By <span class="name">Cody</span> &middot; 27/08/2019</p>
+                            </div>
+                        </div>
+                        <div class="shadow mx-auto position-absolute"></div>
+                    </a>
+                    <a class="news position-relative" href="/tin-tuc/abc/1">
+                        <div class="card"><img class="card-img-top" th:src="@{/image/news/news-2-thumnails.jpg}" alt="news-1"/>
+                            <div class="card-body">
+                                <h5 class="card-title">Nike Classic Cortez – Phối Màu Của Sự Tinh Tế</h5>
+                                <p class="card-text news-short-desc">Bộ sưu tập Nike Classic Cortez với sự kết hợp của 2 tông màu: Hồng Hoa Đăng và màu Cam</p>
+                                <p class="card-text author">By <span class="name">Cody</span> &middot; 21/08/2019</p>
+                            </div>
+                        </div>
+                        <div class="shadow mx-auto position-absolute"></div>
+                    </a>
+                    <a class="news position-relative" href="/tin-tuc/abc/1">
+                        <div class="card"><img class="card-img-top" th:src="@{/image/news/news-3-thumnails.jpg}" alt="news-3"/>
+                            <div class="card-body">
+                                <h5 class="card-title">Air Jordan 1 “Satin Black Toe” xuất hiện hình ảnh chi tiết</h5>
+                                <p class="card-text news-short-desc">Air Jordan 1 “Black Toe” luôn là thiết kế đáng mua nhất, lại còn là satin nữa chứ?</p>
+                                <p class="card-text author">By <span class="name">Cody</span> &middot; 18/08/2019</p>
+                            </div>
+                        </div>
+                        <div class="shadow mx-auto position-absolute"></div>
+                    </a>
+                    <a class="news position-relative" href="/tin-tuc/abc/1">
+                        <div class="card"><img class="card-img-top" th:src="@{/image/news/news-4-thumnails.jpg}" alt="news-4"/>
+                            <div class="card-body">
+                                <h5 class="card-title">HOT! Nike và Levi’s tái hợp với hàng loạt siêu phẩm mới</h5>
+                                <p class="card-text news-short-desc">Đến hẹn lại lên, Nike và Levi’s lại tái hợp với nhau khiến các tín đồ thời trang mê mệt.</p>
+                                <p class="card-text author">By <span class="name">Cody</span> &middot; 15/08/2019</p>
+                            </div>
+                        </div>
+                        <div class="shadow mx-auto position-absolute"></div>
+                    </a>
+                    <a class="news position-relative" href="/tin-tuc/abc/1">
+                        <div class="card"><img class="card-img-top" th:src="@{/image/news/news-6-thumnails.jpg}" alt="news-6"/>
+                            <div class="card-body">
+                                <h5 class="card-title">Nike tung ảnh chính thức phối màu Supreme x SB Dunk Low “Metallic Silver”</h5>
+                                <p class="card-text news-short-desc">Mùa thu năm nay, lần collab thứ 3 của Supreme cùng dòng SB Dunk Low của Nike sẽ ra mắt.</p>
+                                <p class="card-text author">By <span class="name">Cody</span> &middot; 11/08/2019</p>
+                            </div>
+                        </div>
+                        <div class="shadow mx-auto position-absolute"></div>
+                    </a>
+                    <a class="news position-relative" href="/tin-tuc/abc/1">
+                        <div class="card"><img class="card-img-top" th:src="@{/image/news/news-5-thumnails.jpg}" alt="news-5"/>
+                            <div class="card-body">
+                                <h5 class="card-title">Xuất hiện phối màu thứ 3 của Nike Air Force 1 Type N354</h5>
+                                <p class="card-text news-short-desc">Nike N354 là tên dự án với những thiết kế lấy cảm hứng từ kho Archive khổng lồ của The Swoosh.</p>
+                                <p class="card-text author">By <span class="name">Cody</span> &middot; 27/07/2019</p>
+                            </div>
+                        </div>
+                        <div class="shadow mx-auto position-absolute"></div>
+                    </a>
+                    <a class="news position-relative" href="/tin-tuc/abc/1">
+                        <div class="card"><img class="card-img-top" th:src="@{/image/news/news-7-thumnails.jpg}" alt="news-7"/>
+                            <div class="card-body">
+                                <h5 class="card-title">Red Wing kết hợp cùng New Balance chế tác mẫu 997 đầy&nbsp;tinh&nbsp;xảo</h5>
+                                <p class="card-text news-short-desc">Trong lần collab này, Red Wing và New Balance sẽ mang đến dòng sneaker 997.</p>
+                                <p class="card-text author">By <span class="name">Cody</span> &middot; 27/07/2019</p>
+                            </div>
+                        </div>
+                        <div class="shadow mx-auto position-absolute"></div>
+                    </a>
+                </div>
+            </section>
+        </main>
+
+        <th:block id="js-resources">
+            <script type="text/javascript" th:src="@{/script/index.js}"></script>
+            <script type="text/javascript" th:src="@{/script/lastest-news.js}"></script>
+        </th:block>
+    </body>
+</html>
