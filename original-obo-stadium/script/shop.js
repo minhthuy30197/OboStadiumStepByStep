@@ -2,7 +2,7 @@ $(window).resize(changeUi);
 
 $(function() {
   changeUi();
-  pagination();
+  pagination(6,1,"/san-pham?page=");
 });
 
 $('.sort-content').on('click', function() {
@@ -150,27 +150,27 @@ function convertTime(time) {
   return new Date(time * 1000).toLocaleDateString();
 }
 
-$(document).on('click', function(e) {
-  let target = e.target;
-
-  if (target.closest('.sort-item')) {
-    $('.product-row')
-      .data('paginate')
-      .kill();
-    pagination();
-    $('.product-row')
-      .data('paginate')
-      .switchPage(1);
-  }
-});
-
-function pagination() {
-  $('.product-row').paginate({
-    scope: $('.product-link'),
-    perPage: 16,
-    containerTag: 'nav',
-    paginationTag: 'ul',
-    itemTag: 'li',
-    linkTag: 'a'
+function pagination(totalPages, currentPage, link) {
+  $('#pagination').pagination({
+    pages: totalPages,
+    currentPage: currentPage,
+    cssStyle: '',
+    prevText: '<span aria-hidden="true">&laquo;</span>',
+    nextText: '<span aria-hidden="true">&raquo;</span>',
+    onInit: function () {
+        // fire first page loading
+    },
+    onPageClick: function (page, evt) {
+        $('#pagination .active .current').addClass('page-link')
+        $('#pagination .ellipse.clickable').addClass('page-link')
+        $('#pagination .disabled .current.prev').addClass('page-link')
+        $('#pagination .disabled .current.next').addClass('page-link')
+        location.href = link+page
+    }
   });
+
+  $('#pagination .active .current').addClass('page-link')
+  $('#pagination .ellipse.clickable').addClass('page-link')
+  $('#pagination .disabled .current.prev').addClass('page-link')
+  $('#pagination .disabled .current.next').addClass('page-link')
 }

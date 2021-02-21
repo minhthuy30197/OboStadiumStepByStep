@@ -17,12 +17,10 @@
     <link rel="stylesheet" type="text/css" href="./css/components/login-modal.css"/>
     <!-- Useed in Js-->
     <link rel="stylesheet" type="text/css" href="./css/used-in-js.css"/>
-    <!--Vendor-->
-    <link rel="stylesheet" type="text/css" href="./vendor/pagination/jquery.paginate.css"/>
     <!-- Components CSS-->
     <link rel="stylesheet" type="text/css" href="./css/index.css"/>
     <link rel="stylesheet" type="text/css" href="./css/components/header.css"/>
-    <link rel="stylesheet" type="text/css" href="./css/components/pagination.css"/>
+    <link rel="stylesheet" type="text/css" href="./vendor/pagination/simplePagination.css"/>
     <!-- Common CSS-->
     <link rel="stylesheet" type="text/css" href="./css/main.css"/>
     <link rel="stylesheet" type="text/css" href="./css/news.css"/>
@@ -54,6 +52,7 @@
     </header>
     <main>
       <div class="breadcrumb container"><a class="previous-page" href="./index.html">Trang ch&#x1EE7;</a><i class="fas fa-chevron-right arrow"></i><span class="current-page">Tin t&#x1EE9;c</span></div>
+      <!-- List post -->
       <section class="news-wrapper container"><a class="news news-odd" href="post.html">
           <div class="row">
             <div class="details col-5 offset-1">
@@ -170,7 +169,14 @@
               <div class="title">Red Wing kết hợp cùng New Balance chế tác mẫu 997 đầy tinh xảo</div>
               <div class="short-desc">Trong lần collab này, Red Wing và New Balance sẽ mang đến dòng sneaker 997.</div>
             </div>
-          </div></a></section>
+          </div></a>
+      </section>
+
+      <!-- Pagination -->
+      <nav aria-label="Page navigation">
+        <ul class="pagination" id="pagination"></ul>
+      </nav>
+
       <!-- Modals-->
       <div class="modal fade" id="signInSignUp" tabindex="-1" role="dialog" aria-labelledby="signInSignUpLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -239,7 +245,7 @@
     <!-- Main Js-->
     <script type="text/javascript" src="./script/main.js"></script>
     <!-- Pagination Js-->
-    <script type="text/javascript" src="./vendor/pagination/jquery.paginate.js"></script>
+    <script src="./vendor/pagination/jquery.simplePagination.js"></script>
     <script src="./script/except-home-page.js"></script>
     <script src="./script/news.js"></script>
   </body>
