@@ -17,15 +17,13 @@
     <link rel="stylesheet" type="text/css" href="./css/components/login-modal.css"/>
     <!-- Useed in Js-->
     <link rel="stylesheet" type="text/css" href="./css/used-in-js.css"/>
-    <!--Vendor-->
-    <link rel="stylesheet" type="text/css" href="./vendor/pagination/jquery.paginate.css"/>
     <!-- Components CSS-->
     <link rel="stylesheet" type="text/css" href="./css/components/header.css"/>
     <link rel="stylesheet" type="text/css" href="./css/components/products.css"/>
     <link rel="stylesheet" type="text/css" href="./css/components/shop/filter-bar.css"/>
     <link rel="stylesheet" type="text/css" href="./css/components/shop/product-showing.css"/>
     <link rel="stylesheet" type="text/css" href="./css/components/shop/filter-bar-small.css"/>
-    <link rel="stylesheet" type="text/css" href="./css/components/pagination.css"/>
+    <link rel="stylesheet" type="text/css" href="./vendor/pagination/simplePagination.css"/>
     <!-- Common CSS-->
     <link rel="stylesheet" type="text/css" href="./css/main.css"/>
     <link rel="stylesheet" type="text/css" href="./css/except-home-page.css"/>
@@ -54,7 +52,11 @@
       </nav>
     </header>
     <main>
-      <div class="breadcrumb container"><a class="previous-page" href="./index.html">Trang chủ</a><i class="fas fa-chevron-right arrow"></i><span class="current-page">S&#x1EA3;n ph&#x1EA9;m</span></div>
+      <div class="breadcrumb container">
+        <a class="previous-page" href="./index.html">Trang chủ</a>
+        <i class="fas fa-chevron-right arrow"></i><span class="current-page">S&#x1EA3;n ph&#x1EA9;m</span>
+      </div>
+
       <div class="shop-content-wrapper container">
         <div class="row">
           <!-- Filter -->
@@ -269,6 +271,11 @@
                 </div>
               </a>
             </div>
+
+            <!-- Pagination -->
+            <nav aria-label="Page navigation">
+              <ul class="pagination" id="pagination"></ul>
+            </nav>
           </div>
         </div>
       </div>
@@ -632,7 +639,7 @@
     <!-- Main Js-->
     <script type="text/javascript" src="./script/main.js"></script>
     <!-- Pagination Js-->
-    <script type="text/javascript" src="./vendor/pagination/jquery.paginate.js"></script>
+    <script src="./vendor/pagination/jquery.simplePagination.js"></script>
     <!-- Currency-->
     <script type="text/javascript" src="./vendor/currency/currency.min.js"></script>
     <script src="./script/except-home-page.js"></script>

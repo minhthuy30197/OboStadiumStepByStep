@@ -17,12 +17,10 @@
     <link rel="stylesheet" type="text/css" href="./css/components/login-modal.css"/>
     <!-- Useed in Js-->
     <link rel="stylesheet" type="text/css" href="./css/used-in-js.css"/>
-    <!--Vendor-->
-    <link rel="stylesheet" type="text/css" href="./vendor/pagination/jquery.paginate.css"/>
     <!-- Components CSS-->
     <link rel="stylesheet" type="text/css" href="./css/index.css"/>
     <link rel="stylesheet" type="text/css" href="./css/components/header.css"/>
-    <link rel="stylesheet" type="text/css" href="./css/components/pagination.css"/>
+    <link rel="stylesheet" type="text/css" href="./vendor/pagination/simplePagination.css"/>
     <!-- Common CSS-->
     <link rel="stylesheet" type="text/css" href="./css/main.css"/>
     <link rel="stylesheet" type="text/css" href="./css/news.css"/>
@@ -54,123 +52,131 @@
     </header>
     <main>
       <div class="breadcrumb container"><a class="previous-page" href="./index.html">Trang ch&#x1EE7;</a><i class="fas fa-chevron-right arrow"></i><span class="current-page">Tin t&#x1EE9;c</span></div>
+      <!-- List post -->
       <section class="news-wrapper container"><a class="news news-odd" href="post.html">
-          <div class="row">
-            <div class="details col-5 offset-1">
-              <div class="date">27/7/2019</div>
-              <div class="title">
-                Pack &ldquo;Logo Sketch&rdquo; v&#x1EDB;i branding m&#x1ED9;c m&#x1EA1;c tr&ecirc;n Air Max 97 v&agrave;
-                Air Max Plus
-              </div>
-              <div class="short-desc">Trong pack n&agrave;y, ch&uacute;ng ta s&#x1EBD; &dstrok;&#x1EBF;n v&#x1EDB;i m&#x1EAB;u branding ki&#x1EC3;u ph&aacute;c th&#x1EA3;o, &dstrok;&#x1EA7;y m&#x1ED9;c m&#x1EA1;c v&agrave; &ldquo;blend&rdquo; ho&agrave;n h&#x1EA3;o c&ugrave;ng t&#x1ED5;ng th&#x1EC3; ph&#x1ED1;i m&agrave;u.</div>
+        <div class="row">
+          <div class="details col-5 offset-1">
+            <div class="date">27/7/2019</div>
+            <div class="title">
+              Pack &ldquo;Logo Sketch&rdquo; v&#x1EDB;i branding m&#x1ED9;c m&#x1EA1;c tr&ecirc;n Air Max 97 v&agrave;
+              Air Max Plus
             </div>
-            <div class="thumbnail col-lg-6 col-12"><img class="img-fluid" src="./image/news/news-1-thumnails.jpg" alt=""/></div>
-            <div class="details-small col-12">
-              <div class="date">27/7/2019</div>
-              <div class="title">
-                Pack &ldquo;Logo Sketch&rdquo; v&#x1EDB;i branding m&#x1ED9;c m&#x1EA1;c tr&ecirc;n Air Max 97 v&agrave;
-                Air Max Plus
-              </div>
-              <div class="short-desc">
-                Trong pack n&agrave;y, ch&uacute;ng ta s&#x1EBD; &dstrok;&#x1EBF;n v&#x1EDB;i m&#x1EAB;u branding ki&#x1EC3;u ph&aacute;c th&#x1EA3;o, &dstrok;&#x1EA7;y m&#x1ED9;c m&#x1EA1;c v&agrave; &ldquo;blend&rdquo; ho&agrave;n h&#x1EA3;o c&ugrave;ng t&#x1ED5;ng th&#x1EC3;
-                ph&#x1ED1;i m&agrave;u.
-              </div>
+            <div class="short-desc">Trong pack n&agrave;y, ch&uacute;ng ta s&#x1EBD; &dstrok;&#x1EBF;n v&#x1EDB;i m&#x1EAB;u branding ki&#x1EC3;u ph&aacute;c th&#x1EA3;o, &dstrok;&#x1EA7;y m&#x1ED9;c m&#x1EA1;c v&agrave; &ldquo;blend&rdquo; ho&agrave;n h&#x1EA3;o c&ugrave;ng t&#x1ED5;ng th&#x1EC3; ph&#x1ED1;i m&agrave;u.</div>
+          </div>
+          <div class="thumbnail col-lg-6 col-12"><img class="img-fluid" src="./image/news/news-1-thumnails.jpg" alt=""/></div>
+          <div class="details-small col-12">
+            <div class="date">27/7/2019</div>
+            <div class="title">
+              Pack &ldquo;Logo Sketch&rdquo; v&#x1EDB;i branding m&#x1ED9;c m&#x1EA1;c tr&ecirc;n Air Max 97 v&agrave;
+              Air Max Plus
             </div>
-          </div></a><a class="news news-even">
-          <div class="row">
-            <div class="thumbnail col-lg-6 col-12"><img class="img-fluid" src="./image/news/news-2-thumnails.jpg" alt=""/></div>
-            <div class="details col-5 mx-1">
-              <div class="date">27/7/2019</div>
-              <div class="title">Nike Classic Cortez &ndash; Ph&#x1ED1;i M&agrave;u C&#x1EE7;a S&#x1EF1; Tinh T&#x1EBF;</div>
-              <div class="short-desc">
-                Ph&#x1ED1;i m&agrave;u ti&#x1EBF;p theo gia nh&#x1EAD;p b&#x1ED9; s&#x1B0;u t&#x1EAD;p Nike Classic Cortez v&#x1EDB;i s&#x1EF1; k&#x1EBF;t h&#x1EE3;p c&#x1EE7;a 2
-                t&ocirc;ng m&agrave;u: H&#x1ED3;ng Hoa &Dstrok;&abreve;ng v&agrave; m&agrave;u Cam
-              </div>
+            <div class="short-desc">
+              Trong pack n&agrave;y, ch&uacute;ng ta s&#x1EBD; &dstrok;&#x1EBF;n v&#x1EDB;i m&#x1EAB;u branding ki&#x1EC3;u ph&aacute;c th&#x1EA3;o, &dstrok;&#x1EA7;y m&#x1ED9;c m&#x1EA1;c v&agrave; &ldquo;blend&rdquo; ho&agrave;n h&#x1EA3;o c&ugrave;ng t&#x1ED5;ng th&#x1EC3;
+              ph&#x1ED1;i m&agrave;u.
             </div>
-            <div class="details-small col-12">
-              <div class="date">27/7/2019</div>
-              <div class="title">Nike Classic Cortez &ndash; Ph&#x1ED1;i M&agrave;u C&#x1EE7;a S&#x1EF1; Tinh T&#x1EBF;</div>
-              <div class="short-desc">
-                Ph&#x1ED1;i m&agrave;u ti&#x1EBF;p theo gia nh&#x1EAD;p b&#x1ED9; s&#x1B0;u t&#x1EAD;p Nike Classic Cortez v&#x1EDB;i s&#x1EF1; k&#x1EBF;t h&#x1EE3;p c&#x1EE7;a 2
-                t&ocirc;ng m&agrave;u: H&#x1ED3;ng Hoa &Dstrok;&abreve;ng v&agrave; m&agrave;u Cam
-              </div>
+          </div>
+        </div></a><a class="news news-even">
+        <div class="row">
+          <div class="thumbnail col-lg-6 col-12"><img class="img-fluid" src="./image/news/news-2-thumnails.jpg" alt=""/></div>
+          <div class="details col-5 mx-1">
+            <div class="date">27/7/2019</div>
+            <div class="title">Nike Classic Cortez &ndash; Ph&#x1ED1;i M&agrave;u C&#x1EE7;a S&#x1EF1; Tinh T&#x1EBF;</div>
+            <div class="short-desc">
+              Ph&#x1ED1;i m&agrave;u ti&#x1EBF;p theo gia nh&#x1EAD;p b&#x1ED9; s&#x1B0;u t&#x1EAD;p Nike Classic Cortez v&#x1EDB;i s&#x1EF1; k&#x1EBF;t h&#x1EE3;p c&#x1EE7;a 2
+              t&ocirc;ng m&agrave;u: H&#x1ED3;ng Hoa &Dstrok;&abreve;ng v&agrave; m&agrave;u Cam
             </div>
-          </div></a><a class="news news-odd">
-          <div class="row">
-            <div class="details col-5 offset-1">
-              <div class="date">27/7/2019</div>
-              <div class="title">Air Jordan 1 &ldquo;Satin Black Toe&rdquo; xu&#x1EA5;t hi&#x1EC7;n h&igrave;nh &#x1EA3;nh chi ti&#x1EBF;t</div>
-              <div class="short-desc">
-                Air Jordan 1 &ldquo;Black Toe&rdquo; v&#x1EAB;n lu&ocirc;n l&agrave; thi&#x1EBF;t k&#x1EBF; Air Jordan 1 &dstrok;&aacute;ng mua nh&#x1EA5;t m&#x1ECD;i th&#x1EDD;i &dstrok;&#x1EA1;i. V&#x1EAD;y s&#x1EBD; th&#x1EBF; n&agrave;o n&#x1EBF;u ch&uacute;ng kho&aacute;c
-                l&ecirc;n m&igrave;nh ch&#x1EA5;t li&#x1EC7;u satin?
-              </div>
+          </div>
+          <div class="details-small col-12">
+            <div class="date">27/7/2019</div>
+            <div class="title">Nike Classic Cortez &ndash; Ph&#x1ED1;i M&agrave;u C&#x1EE7;a S&#x1EF1; Tinh T&#x1EBF;</div>
+            <div class="short-desc">
+              Ph&#x1ED1;i m&agrave;u ti&#x1EBF;p theo gia nh&#x1EAD;p b&#x1ED9; s&#x1B0;u t&#x1EAD;p Nike Classic Cortez v&#x1EDB;i s&#x1EF1; k&#x1EBF;t h&#x1EE3;p c&#x1EE7;a 2
+              t&ocirc;ng m&agrave;u: H&#x1ED3;ng Hoa &Dstrok;&abreve;ng v&agrave; m&agrave;u Cam
             </div>
-            <div class="thumbnail col-lg-6 col-12"><img class="img-fluid" src="./image/news/news-3-thumnails.jpg" alt=""/></div>
-            <div class="details-small col-12">
-              <div class="date">27/7/2019</div>
-              <div class="title">Air Jordan 1 &ldquo;Satin Black Toe&rdquo; xu&#x1EA5;t hi&#x1EC7;n h&igrave;nh &#x1EA3;nh chi ti&#x1EBF;t</div>
-              <div class="short-desc">
-                Air Jordan 1 &ldquo;Black Toe&rdquo; v&#x1EAB;n lu&ocirc;n l&agrave; thi&#x1EBF;t k&#x1EBF; Air Jordan 1 &dstrok;&aacute;ng mua nh&#x1EA5;t m&#x1ECD;i th&#x1EDD;i &dstrok;&#x1EA1;i. V&#x1EAD;y s&#x1EBD; th&#x1EBF; n&agrave;o n&#x1EBF;u ch&uacute;ng
-                kho&aacute;c
-                l&ecirc;n m&igrave;nh ch&#x1EA5;t li&#x1EC7;u satin?
-              </div>
+          </div>
+        </div></a><a class="news news-odd">
+        <div class="row">
+          <div class="details col-5 offset-1">
+            <div class="date">27/7/2019</div>
+            <div class="title">Air Jordan 1 &ldquo;Satin Black Toe&rdquo; xu&#x1EA5;t hi&#x1EC7;n h&igrave;nh &#x1EA3;nh chi ti&#x1EBF;t</div>
+            <div class="short-desc">
+              Air Jordan 1 &ldquo;Black Toe&rdquo; v&#x1EAB;n lu&ocirc;n l&agrave; thi&#x1EBF;t k&#x1EBF; Air Jordan 1 &dstrok;&aacute;ng mua nh&#x1EA5;t m&#x1ECD;i th&#x1EDD;i &dstrok;&#x1EA1;i. V&#x1EAD;y s&#x1EBD; th&#x1EBF; n&agrave;o n&#x1EBF;u ch&uacute;ng kho&aacute;c
+              l&ecirc;n m&igrave;nh ch&#x1EA5;t li&#x1EC7;u satin?
             </div>
-          </div></a><a class="news news-even">
-          <div class="row">
-            <div class="thumbnail col-lg-6 col-12"><img class="img-fluid" src="./image/news/news-4-thumnails.jpg" alt=""/></div>
-            <div class="details col-5 mx-1">
-              <div class="date">27/7/2019</div>
-              <div class="title">HOT! Nike v&agrave; Levi&rsquo;s t&aacute;i h&#x1EE3;p v&#x1EDB;i h&agrave;ng lo&#x1EA1;t si&ecirc;u ph&#x1EA9;m m&#x1EDB;i</div>
-              <div class="short-desc">&Dstrok;&#x1EBF;n h&#x1EB9;n l&#x1EA1;i l&ecirc;n, Nike v&agrave; Levi&rsquo;s l&#x1EA1;i t&aacute;i h&#x1EE3;p v&#x1EDB;i nhau khi&#x1EBF;n c&aacute;c sneakerheads v&agrave; t&iacute;n &dstrok;&#x1ED3; th&#x1EDD;i trang m&ecirc; m&#x1EC7;t.</div>
+          </div>
+          <div class="thumbnail col-lg-6 col-12"><img class="img-fluid" src="./image/news/news-3-thumnails.jpg" alt=""/></div>
+          <div class="details-small col-12">
+            <div class="date">27/7/2019</div>
+            <div class="title">Air Jordan 1 &ldquo;Satin Black Toe&rdquo; xu&#x1EA5;t hi&#x1EC7;n h&igrave;nh &#x1EA3;nh chi ti&#x1EBF;t</div>
+            <div class="short-desc">
+              Air Jordan 1 &ldquo;Black Toe&rdquo; v&#x1EAB;n lu&ocirc;n l&agrave; thi&#x1EBF;t k&#x1EBF; Air Jordan 1 &dstrok;&aacute;ng mua nh&#x1EA5;t m&#x1ECD;i th&#x1EDD;i &dstrok;&#x1EA1;i. V&#x1EAD;y s&#x1EBD; th&#x1EBF; n&agrave;o n&#x1EBF;u ch&uacute;ng
+              kho&aacute;c
+              l&ecirc;n m&igrave;nh ch&#x1EA5;t li&#x1EC7;u satin?
             </div>
-            <div class="details-small col-12">
-              <div class="date">27/7/2019</div>
-              <div class="title">HOT! Nike v&agrave; Levi&rsquo;s t&aacute;i h&#x1EE3;p v&#x1EDB;i h&agrave;ng lo&#x1EA1;t si&ecirc;u ph&#x1EA9;m m&#x1EDB;i</div>
-              <div class="short-desc">&Dstrok;&#x1EBF;n h&#x1EB9;n l&#x1EA1;i l&ecirc;n, Nike v&agrave; Levi&rsquo;s l&#x1EA1;i t&aacute;i h&#x1EE3;p v&#x1EDB;i nhau khi&#x1EBF;n c&aacute;c sneakerheads v&agrave; t&iacute;n &dstrok;&#x1ED3; th&#x1EDD;i trang m&ecirc; m&#x1EC7;t.</div>
+          </div>
+        </div></a><a class="news news-even">
+        <div class="row">
+          <div class="thumbnail col-lg-6 col-12"><img class="img-fluid" src="./image/news/news-4-thumnails.jpg" alt=""/></div>
+          <div class="details col-5 mx-1">
+            <div class="date">27/7/2019</div>
+            <div class="title">HOT! Nike v&agrave; Levi&rsquo;s t&aacute;i h&#x1EE3;p v&#x1EDB;i h&agrave;ng lo&#x1EA1;t si&ecirc;u ph&#x1EA9;m m&#x1EDB;i</div>
+            <div class="short-desc">&Dstrok;&#x1EBF;n h&#x1EB9;n l&#x1EA1;i l&ecirc;n, Nike v&agrave; Levi&rsquo;s l&#x1EA1;i t&aacute;i h&#x1EE3;p v&#x1EDB;i nhau khi&#x1EBF;n c&aacute;c sneakerheads v&agrave; t&iacute;n &dstrok;&#x1ED3; th&#x1EDD;i trang m&ecirc; m&#x1EC7;t.</div>
+          </div>
+          <div class="details-small col-12">
+            <div class="date">27/7/2019</div>
+            <div class="title">HOT! Nike v&agrave; Levi&rsquo;s t&aacute;i h&#x1EE3;p v&#x1EDB;i h&agrave;ng lo&#x1EA1;t si&ecirc;u ph&#x1EA9;m m&#x1EDB;i</div>
+            <div class="short-desc">&Dstrok;&#x1EBF;n h&#x1EB9;n l&#x1EA1;i l&ecirc;n, Nike v&agrave; Levi&rsquo;s l&#x1EA1;i t&aacute;i h&#x1EE3;p v&#x1EDB;i nhau khi&#x1EBF;n c&aacute;c sneakerheads v&agrave; t&iacute;n &dstrok;&#x1ED3; th&#x1EDD;i trang m&ecirc; m&#x1EC7;t.</div>
+          </div>
+        </div></a><a class="news news-odd">
+        <div class="row">
+          <div class="details col-5 offset-1">
+            <div class="date">27/7/2019</div>
+            <div class="title">Xu&#x1EA5;t hi&#x1EC7;n ph&#x1ED1;i m&agrave;u th&#x1EE9; 3 c&#x1EE7;a Nike Air Force 1 Type N354</div>
+            <div class="short-desc">Nike N354 l&agrave; t&ecirc;n d&#x1EF1; &aacute;n v&#x1EDB;i nh&#x1EEF;ng thi&#x1EBF;t k&#x1EBF; l&#x1EA5;y c&#x1EA3;m h&#x1EE9;ng t&#x1EEB; kho Archive kh&#x1ED5;ng l&#x1ED3; c&#x1EE7;a The Swoosh. N&#x1ED5;i b&#x1EAD;t trong s&#x1ED1; &dstrok;&oacute; l&agrave; phi&ecirc;n b&#x1EA3;n Nike Air Force 1 Type.</div>
+          </div>
+          <div class="thumbnail col-lg-6 col-12"><img class="img-fluid" src="./image/news/news-5-thumnails.jpg" alt=""/></div>
+          <div class="details-small col-12">
+            <div class="date">27/7/2019</div>
+            <div class="title">Xu&#x1EA5;t hi&#x1EC7;n ph&#x1ED1;i m&agrave;u th&#x1EE9; 3 c&#x1EE7;a Nike Air Force 1 Type N354</div>
+            <div class="short-desc">
+              Nike N354 l&agrave; t&ecirc;n d&#x1EF1; &aacute;n v&#x1EDB;i nh&#x1EEF;ng thi&#x1EBF;t k&#x1EBF; l&#x1EA5;y c&#x1EA3;m h&#x1EE9;ng t&#x1EEB; kho Archive kh&#x1ED5;ng l&#x1ED3; c&#x1EE7;a The Swoosh. N&#x1ED5;i b&#x1EAD;t trong s&#x1ED1;
+              &dstrok;&oacute; l&agrave; phi&ecirc;n b&#x1EA3;n Nike Air Force 1 Type.
             </div>
-          </div></a><a class="news news-odd">
-          <div class="row">
-            <div class="details col-5 offset-1">
-              <div class="date">27/7/2019</div>
-              <div class="title">Xu&#x1EA5;t hi&#x1EC7;n ph&#x1ED1;i m&agrave;u th&#x1EE9; 3 c&#x1EE7;a Nike Air Force 1 Type N354</div>
-              <div class="short-desc">Nike N354 l&agrave; t&ecirc;n d&#x1EF1; &aacute;n v&#x1EDB;i nh&#x1EEF;ng thi&#x1EBF;t k&#x1EBF; l&#x1EA5;y c&#x1EA3;m h&#x1EE9;ng t&#x1EEB; kho Archive kh&#x1ED5;ng l&#x1ED3; c&#x1EE7;a The Swoosh. N&#x1ED5;i b&#x1EAD;t trong s&#x1ED1; &dstrok;&oacute; l&agrave; phi&ecirc;n b&#x1EA3;n Nike Air Force 1 Type.</div>
-            </div>
-            <div class="thumbnail col-lg-6 col-12"><img class="img-fluid" src="./image/news/news-5-thumnails.jpg" alt=""/></div>
-            <div class="details-small col-12">
-              <div class="date">27/7/2019</div>
-              <div class="title">Xu&#x1EA5;t hi&#x1EC7;n ph&#x1ED1;i m&agrave;u th&#x1EE9; 3 c&#x1EE7;a Nike Air Force 1 Type N354</div>
-              <div class="short-desc">
-                Nike N354 l&agrave; t&ecirc;n d&#x1EF1; &aacute;n v&#x1EDB;i nh&#x1EEF;ng thi&#x1EBF;t k&#x1EBF; l&#x1EA5;y c&#x1EA3;m h&#x1EE9;ng t&#x1EEB; kho Archive kh&#x1ED5;ng l&#x1ED3; c&#x1EE7;a The Swoosh. N&#x1ED5;i b&#x1EAD;t trong s&#x1ED1;
-                &dstrok;&oacute; l&agrave; phi&ecirc;n b&#x1EA3;n Nike Air Force 1 Type.
-              </div>
-            </div>
-          </div></a><a class="news news-even">
-          <div class="row">
-            <div class="thumbnail col-lg-6 col-12"><img class="img-fluid" src="./image/news/news-6-thumnails.jpg" alt=""/></div>
-            <div class="details col-5 mx-1">
-              <div class="date">27/7/2019</div>
-              <div class="title">Nike tung ảnh chính thức phối màu Supreme x SB Dunk Low “Metallic Silver”</div>
-              <div class="short-desc">Mùa thu năm nay, lần collab thứ 3 của Supreme cùng dòng SB Dunk Low của Nike sẽ ra mắt.</div>
-            </div>
-            <div class="details-small col-12">
-              <div class="date">27/7/2019</div>
-              <div class="title">Nike tung ảnh chính thức phối màu Supreme x SB Dunk Low “Metallic Silver”</div>
-              <div class="short-desc">Mùa thu năm nay, lần collab thứ 3 của Supreme cùng dòng SB Dunk Low của Nike sẽ ra mắt. </div>
-            </div>
-          </div></a><a class="news news-odd">
-          <div class="row">
-            <div class="details col-5 offset-1">
-              <div class="date">27/7/2019</div>
-              <div class="title">Red Wing kết hợp cùng New Balance chế tác mẫu 997 đầy tinh xảo</div>
-              <div class="short-desc">Trong lần collab này, Red Wing và New Balance sẽ mang đến dòng sneaker 997.</div>
-            </div>
-            <div class="thumbnail col-lg-6 col-12"><img class="img-fluid" src="./image/news/news-7-thumnails.jpg" alt=""/></div>
-            <div class="details-small col-12">
-              <div class="date">27/7/2019</div>
-              <div class="title">Red Wing kết hợp cùng New Balance chế tác mẫu 997 đầy tinh xảo</div>
-              <div class="short-desc">Trong lần collab này, Red Wing và New Balance sẽ mang đến dòng sneaker 997.</div>
-            </div>
-          </div></a></section>
+          </div>
+        </div></a><a class="news news-even">
+        <div class="row">
+          <div class="thumbnail col-lg-6 col-12"><img class="img-fluid" src="./image/news/news-6-thumnails.jpg" alt=""/></div>
+          <div class="details col-5 mx-1">
+            <div class="date">27/7/2019</div>
+            <div class="title">Nike tung ảnh chính thức phối màu Supreme x SB Dunk Low “Metallic Silver”</div>
+            <div class="short-desc">Mùa thu năm nay, lần collab thứ 3 của Supreme cùng dòng SB Dunk Low của Nike sẽ ra mắt.</div>
+          </div>
+          <div class="details-small col-12">
+            <div class="date">27/7/2019</div>
+            <div class="title">Nike tung ảnh chính thức phối màu Supreme x SB Dunk Low “Metallic Silver”</div>
+            <div class="short-desc">Mùa thu năm nay, lần collab thứ 3 của Supreme cùng dòng SB Dunk Low của Nike sẽ ra mắt. </div>
+          </div>
+        </div></a><a class="news news-odd">
+        <div class="row">
+          <div class="details col-5 offset-1">
+            <div class="date">27/7/2019</div>
+            <div class="title">Red Wing kết hợp cùng New Balance chế tác mẫu 997 đầy tinh xảo</div>
+            <div class="short-desc">Trong lần collab này, Red Wing và New Balance sẽ mang đến dòng sneaker 997.</div>
+          </div>
+          <div class="thumbnail col-lg-6 col-12"><img class="img-fluid" src="./image/news/news-7-thumnails.jpg" alt=""/></div>
+          <div class="details-small col-12">
+            <div class="date">27/7/2019</div>
+            <div class="title">Red Wing kết hợp cùng New Balance chế tác mẫu 997 đầy tinh xảo</div>
+            <div class="short-desc">Trong lần collab này, Red Wing và New Balance sẽ mang đến dòng sneaker 997.</div>
+          </div>
+        </div></a>
+      </section>
+
+      <!-- Pagination -->
+      <nav aria-label="Page navigation">
+        <ul class="pagination" id="pagination"></ul>
+      </nav>
+
       <!-- Modals-->
       <div class="modal fade" id="signInSignUp" tabindex="-1" role="dialog" aria-labelledby="signInSignUpLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -239,7 +245,7 @@
     <!-- Main Js-->
     <script type="text/javascript" src="./script/main.js"></script>
     <!-- Pagination Js-->
-    <script type="text/javascript" src="./vendor/pagination/jquery.paginate.js"></script>
+    <script src="./vendor/pagination/jquery.simplePagination.js"></script>
     <script src="./script/except-home-page.js"></script>
     <script src="./script/news.js"></script>
   </body>
