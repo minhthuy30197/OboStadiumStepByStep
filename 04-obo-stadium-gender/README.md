@@ -1,6 +1,6 @@
 # Bước 4: Render
 
-> Ở bước 3, chúng ta đã dựng được template thành website tĩnh. Để biến thành website động, cần bổ sung thêm entity, repository, service và xử lý controller để trả ra data đồng thời sử dụng cú pháp Thymeleaf để render
+> Ở bước 3, chúng ta đã dựng được template thành website tĩnh. Để biến thành website động, cần bổ sung thêm entity, repository, service và xử lý controller để trả ra data đồng thời sử dụng cú pháp Thymeleaf để render 
 
 ### Bài tập 1: Tạo entity và repository theo thiết kế database
 
@@ -14,7 +14,7 @@ https://docs.google.com/document/d/1-6Ru2IOioTl3lg0s0TrXmLUL3CNCRertbH4wIG_1z78/
 - Có phân trang. Số lượng bài viết một trang cố định (8)
 - Mặc định load trang 1 khi click vào mục tin tức. Đường dẫn khi đó là /tin-tuc. Chuyển trang đường dẫn là /tin-tuc?page=n (với n là số trang). Cần xử lý trường hợp user nhập n là chữ ---> Redirect về trang hiển thị lỗi 500 thay vì hiển thị Whitelabel Error Page
 - Đường dẫn xem chi tiết bài viết có dạng: /tin-tuc/{slug}/{id} <br>
-  VD: /tin-tuc/hot-nike-va-levis-tai-hop-voi-hang-loat-sieu-pham-moi/4
+VD: /tin-tuc/hot-nike-va-levis-tai-hop-voi-hang-loat-sieu-pham-moi/4
 
 
 #### Gợi ý:
