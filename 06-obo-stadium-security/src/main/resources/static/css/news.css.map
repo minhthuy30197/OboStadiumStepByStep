@@ -1,0 +1,1 @@
+{"version":3,"sourceRoot":"","sources":["../sass/root.scss","../sass/news.scss"],"names":[],"mappings":"AAAQ;ACER;EACI;;;AAGJ;EACI,SDuBS;;;ACpBb;EACI;;;AAGJ;EACI,kBDDc;ECEd;EACA,eDcU;;ACZV;ED0EA;EACA;;ACvEA;EACI,aDeW;ECdX,gBDcW;;ACXf;EACI;EACA;;AAGJ;EACI,WDKW;ECJX;EACA;EACA,YDWI;ECVJ;;;AAIR;EACI;IACI,eDdK;;;ECiBT;IACI,SDlBK;;;ACsBb;EACI;IACI;;;EAGJ;IACI","file":"news.css"}

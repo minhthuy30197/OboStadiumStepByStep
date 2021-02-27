@@ -1,6 +1,6 @@
 $(function () {
   resetModal();
-  signedValidate();
+  configToastr();
 
   $(window).scroll(function () {
     if ($(this).scrollTop() > 100) {
@@ -15,7 +15,28 @@ $(function () {
   }); 
 })
 
+function configToastr() {
+    toastr.options = {
+          "closeButton": true,
+          "debug": false,
+          "newestOnTop": false,
+          "progressBar": false,
+          "positionClass": "toast-top-center",
+          "preventDuplicates": true,
+          "onclick": null,
+          "showDuration": "2000",
+          "hideDuration": "1000",
+          "timeOut": "1000",
+          "extendedTimeOut": "1000",
+          "showEasing": "swing",
+          "hideEasing": "linear",
+          "showMethod": "fadeIn",
+          "hideMethod": "fadeOut"
+    }
+}
+
 // Login/Sign up validate
+
 $(document).on('click', function (e) {
   let target = e.target;
 
@@ -48,7 +69,25 @@ $(document).on('click', function (e) {
     }
 
     if (isValid == true) {
-
+        req = {
+            email: signInEmailValue,
+            password: signInPasswordValue
+        }
+        var myJSON = JSON.stringify(req);
+        $.ajax({
+            url: '/api/login',
+            type: 'POST',
+            data: myJSON,
+            contentType: "application/json; charset=utf-8",
+            success: function(data) {
+                toastr.success("Đăng nhập thành công");
+                signedValidate(true, data.fullName);
+                $('.modal').modal('hide');
+            },
+            error: function(data) {
+                toastr.warning(data.responseJSON.message);
+            },
+        });
     }
   }
 
@@ -122,7 +161,27 @@ $(document).on('click', function (e) {
     }
 
     if (isValid == true) {
-
+        req = {
+            fullName: fullNameValue,
+            email: emailValue,
+            password: passwordValue,
+            phone: phoneValue
+        }
+        var myJSON = JSON.stringify(req);
+        $.ajax({
+            url: '/api/register',
+            type: 'POST',
+            data: myJSON,
+            contentType: "application/json; charset=utf-8",
+            success: function(data) {
+                toastr.success("Đăng ký thành công");
+                signedValidate(true, data.fullName);
+                $('.modal').modal('hide');
+            },
+            error: function(data) {
+                toastr.warning(data.responseJSON.message);
+            },
+        });
     }
   }
 
@@ -144,7 +203,6 @@ function convertPrice(currency) {
   return convert;
 }
 
-
 // Reset form after close modal
 function resetModal() {
   $('.modal').on('hidden.bs.modal', function () {
@@ -153,16 +211,16 @@ function resetModal() {
   })
 }
 
-function signedValidate(status = false) {
+
+function signedValidate(status = false, fullname = '') {
   if (status == true) {
-    let signedLink = `
-  <a id="account-setting" class="nav-link account-setting" href="./account.html">Xin chào ABC</a>`;
+    isLogined = true;
+    let signedLink = `<a id="account-setting" class="nav-link account-setting" href="/tai-khoan">Xin chào ${fullname}</a>`;
 
     $('.account-setting').replaceWith(signedLink);
   } else {
-    let notSignedLink = `
-  <a class="nav-link account-setting" href="" data-toggle="modal" data-target="#signInSignUp">Tài khoản</a>
-  `;
+    isLogined = false;
+    let notSignedLink = `<a class="nav-link account-setting" href="" data-toggle="modal" data-target="#signInSignUp">Tài khoản</a>`;
     $('.account-setting').replaceWith(notSignedLink);
   }
 }
