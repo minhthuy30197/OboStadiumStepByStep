@@ -122,7 +122,25 @@ $(document).on('click', function (e) {
     }
 
     if (isValid == true) {
-
+        var req = {
+            fullName: fullNameValue,
+            email: emailValue,
+            password: passwordValue,
+            phone: phoneValue
+        };
+        var tmp = JSON.stringify(req);
+        $.ajax({
+            url: '/api/register',
+            type: 'POST',
+            contentType: 'application/json',
+            data: tmp,
+            success: function(data) {
+                console.log("ok");
+            },
+            error: function(data) {
+                console.log("fail oi");
+            }
+        });
     }
   }
 
