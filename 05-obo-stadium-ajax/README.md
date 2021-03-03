@@ -69,5 +69,5 @@ Cú pháp AJAX
             error: function(data) {               // Hàm xử ký khi gọi lỗi 
                 console.log("fail oi");
             }
-        });
+    });
 ```
