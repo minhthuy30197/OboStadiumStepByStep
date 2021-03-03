@@ -7,7 +7,7 @@ AJAX - "Asynchronous JavaScript and XML" - là một bộ công cụ cho phép l
 - https://www.w3schools.com/jquery/ajax_ajax.asp
 
 ## Thực hành
-###Yêu cầu
+### Yêu cầu
 Cho sẵn hàm xử lý request đăng ký tài khoản mới (Method register trong class UserController). Hãy sử dụng AJAX để gửi request đăng ký lên server. Thông tin API như sau:<br>
 - POST /api/register<br>
 - Body request
@@ -32,7 +32,7 @@ Thành công
 ```
 
 
-###Hướng dẫn
+### Hướng dẫn
 Ở các bước trước đã tách modal đăng nhập/đăng kí ra thành một fragment chung và nhúng vào layout. Code javascript để bắt sự kiện khi ấn vào nút đăng kí nằm ở file **/static/script/main.js**
 ```java
   // Validate sign up
