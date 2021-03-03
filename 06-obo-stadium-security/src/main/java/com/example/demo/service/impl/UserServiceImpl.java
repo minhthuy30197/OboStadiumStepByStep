@@ -7,6 +7,7 @@ import com.example.demo.repository.UserRepository;
 import com.example.demo.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import java.util.Arrays;
 
 @Component
 public class UserServiceImpl implements UserService {
@@ -28,6 +29,7 @@ public class UserServiceImpl implements UserService {
                     .email(req.getEmail())
                     .phone(req.getPhone())
                     .password(req.getPassword())
+                    .roles(Arrays.asList("USER"))
                     .build();
         return userRepository.save(user);
     }
