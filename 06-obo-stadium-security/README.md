@@ -11,8 +11,9 @@ Tham khảo các bài viết trên trang Loda.me:
 https://www.baeldung.com/spring-cors
 
 ### Cấu hình serve các file resources
-Sau khi nhúng Spring security, khi serve các file resource (ảnh, file css, file js,...) bị lỗi 403 như hình ---> Cần cấu hình để bỏ qua không thực hiện xác thực với các yêu cầu serve file tĩnh
+Sau khi nhúng Spring security, khi serve các file resource (ảnh, file css, file js,...) bị lỗi 403 như hình ---> Cần cấu hình để bỏ qua không thực hiện xác thực với các yêu cầu serve file tĩnh<br>
 ![Thiết kế database](../images/error1.PNG)
+
 WebSecurityConfig.class
 ```java
 @Configuration
